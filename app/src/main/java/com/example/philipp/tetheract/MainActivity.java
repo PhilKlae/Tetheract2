@@ -39,7 +39,9 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
     enum NavigationStatus{
 
         main,
-        shop
+        shop,
+        settings,
+        library
 
     }
 

@@ -9,4 +9,17 @@
 
 
     </declare-styleable>
+
+    <declare-styleable name="navigationButton">
+        <attr name="statusLink" format="enum" >
+            <enum name="main" value="0"/>
+            <enum name="shop" value="1"/>
+            <enum name="settings" value="2"/>
+            <enum name="library" value="3"/>
+        </attr>
+
+
+
+
+    </declare-styleable>
 </resources>
