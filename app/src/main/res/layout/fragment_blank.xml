@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.BlankFragment">
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/ShopView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:id="@+id/feature1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/minecraft"
+                    custom:downId="game3"
+                    custom:leftId="feature1"
+                    custom:packageName="com.mojang.minecraftpe"
+                    custom:rightId=""
+                    custom:upId=""
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Genre" />
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="93dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/asphalt8"
+                    custom:downId=""
+                    custom:leftId="game1"
+                    custom:packageName="com.gameloft.android.ANMP.GloftA8HM"
+                    custom:rightId="game3"
+                    custom:upId="feature1"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="99dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/beatbuddy"
+                    custom:downId=""
+                    custom:leftId="game2"
+                    custom:packageName="unity.threaks.beatbuddy.android"
+                    custom:rightId="game4"
+                    custom:upId="feature2" />
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="92dp"
+                    android:layout_height="99dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/oddworld"
+                    custom:downId=""
+                    custom:leftId="game3"
+                    custom:packageName="com.and.games505.portal_knights"
+                    custom:rightId=""
+                    custom:upId="feature2"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@android:drawable/ic_media_play"
+                    android:backgroundTint="@drawable/controller_selector_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Genre"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="93dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/crimsonland"
+                    custom:downId=""
+                    custom:leftId="game1"
+                    custom:packageName="com.the10tons.crimsonland.humble"
+                    custom:rightId="game3"
+                    custom:upId="feature1"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="99dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/gtasanandreas"
+                    custom:downId=""
+                    custom:leftId="game2"
+                    custom:packageName="com.rockstargames.gtasager"
+                    custom:rightId="game4"
+                    custom:upId="feature2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="92dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/intothedead2"
+                    custom:downId=""
+                    custom:leftId="game3"
+                    custom:packageName="com.lge.gametuner"
+                    custom:rightId=""
+                    custom:upId="feature2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+                <ImageButton
+
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@android:drawable/ic_media_play"
+                    android:backgroundTint="@drawable/controller_selector_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Genre"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="93dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/legostarwars"
+                    custom:downId=""
+                    custom:leftId="game1"
+                    custom:packageName="com.wb.lego.tcs"
+                    custom:rightId="game3"
+                    custom:upId="feature1"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="99dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/leosfortune"
+                    custom:downId=""
+                    custom:leftId="game2"
+                    custom:packageName="com.leosfortune"
+                    custom:rightId="game4"
+                    custom:upId="feature2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="92dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/limbo"
+                    custom:downId=""
+                    custom:leftId="game3"
+                    custom:packageName="com.playdead.limbo.full"
+                    custom:rightId=""
+                    custom:upId="feature2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+                <ImageButton
+
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@android:drawable/ic_media_play"
+                    android:backgroundTint="@drawable/controller_selector_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Genre"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="93dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mechanicescape"
+                    custom:downId=""
+                    custom:leftId="game1"
+                    custom:packageName="com.playdead.limbo.full"
+                    custom:rightId="game3"
+                    custom:upId="feature1"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="99dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/metalslugx"
+                    custom:downId=""
+                    custom:leftId="game2"
+                    custom:packageName="com.leosfortune"
+                    custom:rightId="game4"
+                    custom:upId="feature2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="92dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pacmandx"
+                    custom:downId=""
+                    custom:leftId="game3"
+                    custom:packageName="com.bandainamcoent.pacmancedx"
+                    custom:rightId=""
+                    custom:upId="feature2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+                <ImageButton
+
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@android:drawable/ic_media_play"
+                    android:backgroundTint="@drawable/controller_selector_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Genre"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="93dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/portalknights"
+                    custom:downId=""
+                    custom:leftId="game1"
+                    custom:packageName="com.and.games505.portal_knights"
+                    custom:rightId="game3"
+                    custom:upId="feature1"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="99dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/riptide_gp_renegade"
+                    custom:downId=""
+                    custom:leftId="game2"
+                    custom:packageName="com.vectorunit.silver.googleplay"
+                    custom:rightId="game4"
+                    custom:upId="feature2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+                <com.example.philipp.tetheract.ShopButton
+                    android:layout_width="92dp"
+                    android:layout_height="99dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/virtuatennischallenge"
+                    custom:downId=""
+                    custom:leftId="game3"
+                    custom:packageName="jp.co.sega.vtc.OneApk"
+                    custom:rightId=""
+                    custom:upId="feature2"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+                <ImageButton
+
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@android:drawable/ic_media_play"
+                    android:backgroundTint="@drawable/controller_selector_color"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

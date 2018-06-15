@@ -1,0 +1,12 @@
+<resources>
+    <declare-styleable name="MainView">
+        <attr name="leftId" format="string" />
+        <attr name="rightId" format="string" />
+        <attr name="upId" format="string" />
+        <attr name="downId" format="string" />
+        <attr name="packageName" format="string" />
+
+
+
+    </declare-styleable>
+</resources>
