@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -11,19 +12,21 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="@color/background"
         android:gravity="left"
         android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/Shop"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_weight="1"
             android:background="@android:color/background_light"
             android:backgroundTint="@drawable/controller_selector_color"
             android:focusable="false"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            android:src="@drawable/icon_browse"
+            app:srcCompat="@drawable/icon_browse" />
 
         <ImageButton
             android:id="@+id/Library"
@@ -44,8 +47,8 @@
             android:layout_gravity="right"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:focusable="false"
             android:backgroundTint="@drawable/controller_selector_color"
+            android:focusable="false"
             app:srcCompat="@mipmap/ic_launcher_round" />
 
     </LinearLayout>
