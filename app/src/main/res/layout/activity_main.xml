@@ -58,11 +58,16 @@
         android:name="com.example.philipp.tetheract.fragments.BlankFragment"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
-        android:layout_weight="5.5" />
+        android:layout_weight="5.5"
+        tools:layout="@layout/fragment_blank" />
+
 
     <Space
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_weight="0.2" />
+
+
+
 
 </LinearLayout>
