@@ -1,4 +1,4 @@
-package com.example.philipp.tetheract;
+package com.example.philipp.tetheract.layouts;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,9 +14,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import static com.example.philipp.tetheract.Dpad.LEFT;
-import static com.example.philipp.tetheract.Dpad.RIGHT;
-import static com.example.philipp.tetheract.Dpad.UP;
+import com.example.philipp.tetheract.R;
+
+
 
 /**
  * TODO: document your custom view class.
@@ -28,7 +28,7 @@ public class ShopButton extends AppCompatImageButton {
     String upButtonId ="";
     String downButtonId ="";
 
-    String PackageName = "";
+    public String PackageName = "";
 
     public ShopButton(Context context) {
         super(context);

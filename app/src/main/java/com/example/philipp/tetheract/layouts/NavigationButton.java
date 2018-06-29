@@ -1,10 +1,12 @@
-package com.example.philipp.tetheract;
+package com.example.philipp.tetheract.layouts;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 import com.example.philipp.tetheract.MainActivity.NavigationStatus;
+import com.example.philipp.tetheract.R;
+
 public class NavigationButton extends AppCompatImageButton {
     NavigationStatus buttonStatus;
 

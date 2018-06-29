@@ -5,69 +5,248 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/Navigation"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@color/background"
-        android:gravity="left"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/Shop"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
+        <LinearLayout
+            android:id="@+id/Navigation"
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/background_light"
-            android:backgroundTint="@drawable/controller_selector_color"
-            android:focusable="false"
-            android:src="@drawable/icon_browse"
-            app:srcCompat="@drawable/icon_browse" />
+            android:background="@color/background"
+            android:gravity="left"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/Library"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_weight="1"
-            android:background="@android:color/background_light"
-            android:backgroundTint="@drawable/controller_selector_color"
-            android:focusable="false"
-            android:focusableInTouchMode="false"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            <com.example.philipp.tetheract.layouts.NavigationCardView
+                android:id="@+id/Shop"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
 
-        <ImageButton
-            android:id="@+id/Settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/glow"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/steam_bg_icon" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    >
+
+                </FrameLayout>
+
+                <ImageButton
+                    android:id="@+id/Shop"
+                    android:layout_width="50dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+
+                    android:scaleType="fitCenter"
+                    android:tint="@color/buttonTintNoHighlight"
+                    app:srcCompat="@drawable/icon_store" />
+            </com.example.philipp.tetheract.layouts.NavigationCardView>
+
+            <com.example.philipp.tetheract.layouts.NavigationCardView
+                android:id="@+id/Library"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/glow"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/steam_bg_icon" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false">
+
+                </FrameLayout>
+
+                <ImageButton
+
+                    android:layout_width="50dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:focusable="false"
+
+                    android:focusableInTouchMode="false"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/buttonTintNoHighlight"
+                    app:srcCompat="@drawable/icon_in_library" />
+            </com.example.philipp.tetheract.layouts.NavigationCardView>
+
+            <com.example.philipp.tetheract.layouts.NavigationCardView
+                android:id="@+id/Community"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/glow"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/steam_bg_icon" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false">
+
+                </FrameLayout>
+
+                <ImageButton
+
+                    android:layout_width="50dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/buttonTintNoHighlight"
+                    app:srcCompat="@drawable/icon_community" />
+            </com.example.philipp.tetheract.layouts.NavigationCardView>
+
+            <com.example.philipp.tetheract.layouts.NavigationCardView
+                android:id="@+id/Settings"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/glow"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/steam_bg_icon" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false">
+
+                </FrameLayout>
+
+                <ImageButton
+
+                    android:layout_width="50dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:scaleType="fitCenter"
+
+                    android:tint="@color/buttonTintNoHighlight"
+                    app:srcCompat="@drawable/icon_settings" />
+                />
+            </com.example.philipp.tetheract.layouts.NavigationCardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/background_light"
-            android:backgroundTint="@drawable/controller_selector_color"
-            android:focusable="false"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/ShopFragmentView"
+                android:name="com.example.philipp.tetheract.fragments.BlankFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_weight="5.5"
+                tools:layout="@layout/fragment_blank" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <fragment
-        android:id="@+id/ShopFragmentView"
-        android:name="com.example.philipp.tetheract.fragments.BlankFragment"
-        android:layout_width="45dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="5.5"
-        tools:layout="@layout/fragment_blank" />
-
-
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:layout_weight="0.2" />
-
-
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_weight="1"
+        android:background="@color/highlight"
+        android:gravity="right|center_vertical"
+        android:paddingRight="10dp"
+        android:text="Press A for Shop" />
 
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="white">#FFFFFF</color>
     <color name="colorPrimary">#5495ff</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff4081</color>
@@ -10,5 +11,7 @@
     <color name="highlight">#a3cbe5</color>
     <color name="font">#606d80</color>
     <color name="button">#1d7096</color>
-
+    <color name="textBackground">#9c13a9da</color>
+    <color name="buttonTintNoHighlight">#1297c4</color>
+    <color name="buttonTintHighlight">#b4dff7</color>
 </resources>

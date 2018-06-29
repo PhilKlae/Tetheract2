@@ -1,27 +1,23 @@
 package com.example.philipp.tetheract;
 
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.graphics.Canvas;
-import android.graphics.Color;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.widget.CardView;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.philipp.tetheract.fragments.BlankFragment;
+import com.example.philipp.tetheract.layouts.GameCardView;
+import com.example.philipp.tetheract.layouts.NavigationCardView;
+import com.example.philipp.tetheract.layouts.ShopButton;
 
 import java.lang.reflect.Field;
-import java.util.List;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 
@@ -33,10 +29,10 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
     public ShopButton selectedButton;
     public int selectedColor=0xFFCC0000;
 
-    public ImageButton[] navigationButtons= new ImageButton[3];
+    public NavigationCardView[] navigationButtons= new NavigationCardView[4];
     public LinearLayout navigationBar;
 
-    enum NavigationStatus{
+    public enum NavigationStatus{
 
         main,
         shop,
@@ -101,22 +97,14 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
 
 
-        final PackageManager pm = getPackageManager();
-//get a list of installed apps.
-        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
 
-        for (ApplicationInfo packageInfo : packages) {
-            String TAG= "packages";
-            Log.d(TAG, "package :" + packageInfo.packageName);
-            Log.d(TAG, "name :" + packageInfo.loadLabel(getPackageManager()).toString());
-
-        }
 
 
         //initialize navigationButtons
-        navigationButtons[0]=(ImageButton) findViewById(R.id.Shop);
-        navigationButtons[1]=(ImageButton) findViewById(R.id.Library);
-        navigationButtons[2]=(ImageButton) findViewById(R.id.Settings);
+        navigationButtons[0]=(NavigationCardView) findViewById(R.id.Shop);
+        navigationButtons[1]=(NavigationCardView) findViewById(R.id.Library);
+        navigationButtons[2]=(NavigationCardView) findViewById(R.id.Settings);
+        navigationButtons[3]=(NavigationCardView) findViewById(R.id.Community);
 
         navigationBar=(LinearLayout) findViewById(R.id.Navigation);
 
@@ -141,22 +129,42 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
 
                 if(k.getKeyCode()==KeyEvent.KEYCODE_BUTTON_A){
-                    try {
-                        ShopButton focusedButton = (ShopButton) getCurrentFocus();
+                    if(navigationStatus==NavigationStatus.main) {
+                        NavigationCardView focusedButton = (NavigationCardView) getCurrentFocus();
+                        if(focusedButton == navigationButtons[0]){
+                            swapNavigationFocus();
+                        }else{
+                            Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show();
+                        }
 
-                        if (focusedButton != null) {
-                            Intent LaunchIntent = getPackageManager().getLaunchIntentForPackage(focusedButton.PackageName);
-                            startActivity(LaunchIntent);
+                    }
+
+
+                    if(navigationStatus==NavigationStatus.shop){
+                        try {
+                            ShopButton focusedButton = (ShopButton) getCurrentFocus();
+
+                            if (focusedButton != null) {
+                                Intent LaunchIntent = getPackageManager().getLaunchIntentForPackage(focusedButton.PackageName);
+                                startActivity(LaunchIntent);
+
+                            }
+                        }
+                        catch(Exception e){
+
+                                Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show();
 
                         }
                     }
-                    catch(Exception e){
 
-                    }
+
+
                 }
 
                 if(k.getKeyCode()==KeyEvent.KEYCODE_BUTTON_B){
-                    swapNavigationFocus();
+                    if(navigationStatus==NavigationStatus.shop){
+                        swapNavigationFocus();
+                    }
                 }
         }
      /*   selectedButton.setBackgroundColor(0xFFFFF);
@@ -214,7 +222,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
             shopLayout.setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
             shopFragmentView.setFocusable(true);
             //request focus
-            ((ShopButton)findViewById(R.id.feature1)).requestFocus();
+            ((GameCardView)findViewById(R.id.feature1)).requestFocus();
 
             //set navigation not focusable
             navigationBar.setFocusable(false);
@@ -237,8 +245,8 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
             //set navigationbuttons focusable
             for(int i=0;i<navigationButtons.length;i++){
 
-                navigationButtons[i].setFocusable(true);
-                navigationButtons[i].setFocusableInTouchMode(true);
+               navigationButtons[i].setFocusable(true);
+               navigationButtons[i].setFocusableInTouchMode(true);
 
 
             }
