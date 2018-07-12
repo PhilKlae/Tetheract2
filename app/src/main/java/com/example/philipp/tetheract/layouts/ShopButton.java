@@ -46,7 +46,7 @@ public class ShopButton extends AppCompatImageButton {
             rightButtonId = a.getString(R.styleable.MainView_rightId);
             upButtonId = a.getString(R.styleable.MainView_upId);
             downButtonId = a.getString(R.styleable.MainView_downId);
-            PackageName = a.getString(R.styleable.MainView_packageName);
+            PackageName = a.getString(R.styleable.MainView_packageNameOld);
         } finally {
             a.recycle();
         }
@@ -66,7 +66,7 @@ public class ShopButton extends AppCompatImageButton {
             rightButtonId = a.getString(R.styleable.MainView_rightId);
             upButtonId = a.getString(R.styleable.MainView_upId);
             downButtonId = a.getString(R.styleable.MainView_downId);
-            PackageName = a.getString(R.styleable.MainView_packageName);
+            PackageName = a.getString(R.styleable.MainView_packageNameOld);
         } finally {
             a.recycle();
         }

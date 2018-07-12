@@ -1,0 +1,146 @@
+[
+  {
+    "Genre": "Editor's Pick",
+    "title": "Minecraft",
+    "price": "7.99",
+    "thumbnailName": "minecraftbig",
+    "packageName": "com.mojang.minecraftpe",
+    "Pricealt": "7.99",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe"
+  },
+  {
+    "Genre": "Racing/Sports",
+    "title": "Reckless Racing 3",
+    "price": "2.49",
+    "thumbnailName": "reckless3",
+    "packageName": "com.pixelbite.rr3",
+    "Pricealt": "2.49",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.pixelbite.rr3"
+  },
+  {
+    "Genre": "Action",
+    "title": "Portal Knights",
+    "price": "5.49",
+    "thumbnailName": "portalknights",
+    "packageName": "com.and.games505.portal_knights",
+    "Pricealt": "5.49",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.and.games505.portal_knights"
+  },
+  {
+    "Genre": "Indie",
+    "title": "Limbo",
+    "price": "5.21",
+    "thumbnailName": "limbo",
+    "packageName": "com.playdead.limbo.full",
+    "Pricealt": "5.21",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.playdead.limbo.full"
+  },
+  {
+    "Genre": "Evergreens",
+    "title": "Grand Theft Auto: San Andreas",
+    "price": "7.99",
+    "thumbnailName": "gtasanandreas",
+    "packageName": "com.rockstargames.gtasager",
+    "Pricealt": "7.99",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.rockstargames.gtasager"
+  },
+  {
+    "Genre": "Free to play",
+    "title": "Shadowgun Legends",
+    "price": "Free to play",
+    "thumbnailName": "shadowgunsm",
+    "packageName": "com.madfingergames.legends",
+    "Pricealt": "Free to play",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.madfingergames.legends"
+  },
+  {
+    "Genre": "Racing/Sports",
+    "title": "Riptide GP: Renegade",
+    "price": "2.99",
+    "thumbnailName": "riptidegpren",
+    "packageName": "com.vectorunit.silver.googleplay",
+    "Pricealt": "2.99",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.vectorunit.silver.googleplay"
+  },
+  {
+    "Genre": "Action",
+    "title": "Leo's Fortune",
+    "price": "5.49",
+    "thumbnailName": "leosfortune",
+    "packageName": "com.leosfortune",
+    "Pricealt": "5.49",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.leosfortune"
+  },
+  {
+    "Genre": "Indie",
+    "title": "Goat Simulator",
+    "price": "4.99",
+    "thumbnailName": "goatsim",
+    "packageName": "com.coffeestainstudios.goatsimulator",
+    "Pricealt": "4.99",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.coffeestainstudios.goatsimulator"
+  },
+  {
+    "Genre": "Evergreens",
+    "title": "PAC-MAN CE DX",
+    "price": "4.99",
+    "thumbnailName": "pacmandx",
+    "packageName": "com.bandainamcoent.pacmancedx",
+    "Pricealt": "4.99",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.bandainamcoent.pacmancedx"
+  },
+  {
+    "Genre": "Free to play",
+    "title": "Rayman Adventures",
+    "price": "Free to play",
+    "thumbnailName": "raymanl",
+    "packageName": "com.ubisoft.raymanadventures",
+    "Pricealt": "Free to play",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.ubisoft.raymanadventures"
+  },
+  {
+    "Genre": "Racing/Sports",
+    "title": "NBA Jam",
+    "price": "5.49",
+    "thumbnailName": "nbajam",
+    "packageName": "com.eamobile.nbajam_row_wf",
+    "Pricealt": "5.49",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.eamobile.nbajam_row_wf"
+  },
+  {
+    "Genre": "Action",
+    "title": "LEGO® Star Wars™: TCS",
+    "price": "6.99",
+    "thumbnailName": "legostarwars",
+    "packageName": "com.wb.lego.tcs",
+    "Pricealt": "6.99",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.wb.lego.tcs"
+  },
+  {
+    "Genre": "Indie",
+    "title": "Beatbuddy",
+    "price": "4.99",
+    "thumbnailName": "beatbuddy",
+    "packageName": "unity.threaks.beatbuddy.android",
+    "Pricealt": "4.99",
+    "Store Link": "https://play.google.com/store/apps/details?id=unity.threaks.beatbuddy.android"
+  },
+  {
+    "Genre": "Evergreens",
+    "title": "Metal Slug X",
+    "price": "3.49",
+    "thumbnailName": "metalslugx",
+    "packageName": "com.dotemu.neogeo.mslugx",
+    "Pricealt": "3.49",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.dotemu.neogeo.mslugx"
+  },
+  {
+    "Genre": "Free to play",
+    "title": "Horizon Chase",
+    "price": "Free to play",
+    "thumbnailName": "horchase",
+    "packageName": "com.aquiris.horizonchase",
+    "Pricealt": "Free to play",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.aquiris.horizonchase"
+  }
+]

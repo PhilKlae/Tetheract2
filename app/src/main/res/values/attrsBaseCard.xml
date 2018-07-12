@@ -1,0 +1,14 @@
+<resources>
+    <declare-styleable name="BaseCard">
+        <attr name="aString" format="string" />
+        <attr name="bString" format="string" />
+        <attr name="yString" format="string" />
+        <attr name="xString" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="GameCard">
+        <attr name="price" format="string" />
+        <attr name="title" format="string" />
+        <attr name="packageName" format="string" />
+    </declare-styleable>
+</resources>

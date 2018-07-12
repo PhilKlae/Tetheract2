@@ -14,4 +14,12 @@
     <color name="textBackground">#9c13a9da</color>
     <color name="buttonTintNoHighlight">#1297c4</color>
     <color name="buttonTintHighlight">#b4dff7</color>
+    <color name="fontLight">#65bef2</color>
+    <color name="detailbuttonendgradient">#133559</color>
+    <color name="detailbuttonstartgradient">#234a69</color>
+    <color name="detailGrey">#21323f</color>
+    <color name="detailNumbersGrey">#80a1b6</color>
+    <color name="detailTextBodyFontColor">#c5d3de</color>
+    <color name="detailFontGreen">#a1cd06</color>
+
 </resources>

@@ -81,7 +81,7 @@ public class BlankFragment extends Fragment {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
-            clickedShopItem("test");
+
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
@@ -109,11 +109,7 @@ public class BlankFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    public void clickedShopItem(String packageName){
 
-        ((MainActivity)mListener).onShopItemClicked(packageName);
-
-    }
 
 
 

@@ -4,7 +4,7 @@
         <attr name="rightId" format="string" />
         <attr name="upId" format="string" />
         <attr name="downId" format="string" />
-        <attr name="packageName" format="string" />
+        <attr name="packageNameOld" format="string" />
 
 
 

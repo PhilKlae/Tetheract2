@@ -6,12 +6,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/motivasans</item>
+        <item name="fontFamily">@font/motivasans</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
     </style>
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:fontFamily">@font/motivasans</item>
+        <item name="fontFamily">@font/motivasans</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
     </style>
 
 

@@ -1,6 +1,7 @@
 package com.example.philipp.tetheract.layouts;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -20,20 +21,58 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.philipp.tetheract.MainActivity;
 import com.example.philipp.tetheract.R;
 
-public class NavigationCardView extends CardView{
+public class NavigationCardView extends BaseCard{
     boolean drawGlow = false;
     public NavigationCardView(Context context) {
         super(context);
+        for(int i=0;i<buttonTooltips.length;i++){
+            buttonTooltips[i] = "";
+        }
     }
 
     public NavigationCardView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        for(int i=0;i<buttonTooltips.length;i++){
+            buttonTooltips[i] = "";
+        }
+        TypedArray a = context.getTheme().obtainStyledAttributes(
+                attrs,
+                R.styleable.BaseCard,
+                0, 0);
+
+        try {
+            buttonTooltips[0] = a.getString(R.styleable.BaseCard_aString);
+            buttonTooltips[1] = a.getString(R.styleable.BaseCard_bString);
+            buttonTooltips[2] = a.getString(R.styleable.BaseCard_xString);
+            buttonTooltips[3] = a.getString(R.styleable.BaseCard_yString);
+
+        } finally {
+            a.recycle();
+        }
     }
 
     public NavigationCardView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        for(int i=0;i<buttonTooltips.length;i++){
+            buttonTooltips[i] = "";
+        }
+        TypedArray a = context.getTheme().obtainStyledAttributes(
+                attrs,
+                R.styleable.BaseCard,
+                0, 0);
+
+        try {
+            buttonTooltips[0] = a.getString(R.styleable.BaseCard_aString);
+            buttonTooltips[1] = a.getString(R.styleable.BaseCard_bString);
+            buttonTooltips[2] = a.getString(R.styleable.BaseCard_xString);
+            buttonTooltips[3] = a.getString(R.styleable.BaseCard_yString);
+
+        } finally {
+            a.recycle();
+        }
     }
 
 
@@ -43,12 +82,19 @@ public class NavigationCardView extends CardView{
 
         if(gainFocus){
 
+            try {
+
+                ((MainActivity)getContext()).updateButtonTooltips(this);
+
+
+
+
           //  Toast.makeText(getContext(), "selected navigation", Toast.LENGTH_SHORT).show();
             ((FrameLayout)getChildAt(1)).setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.highlightgradient, null));
             DrawableCompat.setTint(  ((ImageView)getChildAt(2)).getDrawable(), ContextCompat.getColor(getContext(), R.color.buttonTintHighlight));
         //    ((ImageView)getChildAt(2)).setColorFilter(R.color.buttonTintHighlight);
             setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-            setForeground(ResourcesCompat.getDrawable(getResources(), R.drawable.border, null));
+          //  setForeground(ResourcesCompat.getDrawable(getResources(), R.drawable.border, null));
            // drawGlow = true;
            /* LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
                     99,
@@ -61,14 +107,16 @@ public class NavigationCardView extends CardView{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 this.setElevation(50);
             }*/
-            //   expand(10);
+             //  expand(1.2f);
+            }catch(Exception e){
 
+            }
         }else{
 
             ((FrameLayout)getChildAt(1)).setBackground(null);
             DrawableCompat.setTint(  ((ImageView)getChildAt(2)).getDrawable(), ContextCompat.getColor(getContext(), R.color.buttonTintNoHighlight));
          //   drawGlow = false;
-            setForeground(null);
+        //    setForeground(null);
 
           /*  LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
                     99,
@@ -82,10 +130,10 @@ public class NavigationCardView extends CardView{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 this.setElevation(0);
             }*/
-            //collapse();
+         //   collapse();
         }
     }
-            Paint paint = new Paint();
+           /* Paint paint = new Paint();
     {
         paint.setAntiAlias(true);
         paint.setColor(Color.WHITE);
@@ -97,17 +145,15 @@ public class NavigationCardView extends CardView{
         super.draw(canvas);
         if(drawGlow)
             canvas.drawCircle(0, 0, 150, paint);
-    }
+    }*/
+
+    public void collapse() {
+        final float initialSize = getScaleX();
 
 
+        float targetSize = 1;
 
- /* public void collapse() {
-        final int initialWidth = getWidth();
-
-        measure(99, LayoutParams.MATCH_PARENT);
-        int targetWidth = getMeasuredWidth();
-
-        final int distanceToExpand = targetWidth - initialWidth;
+        final float distanceToExpand = targetSize - initialSize;
 
         Animation a = new Animation() {
             @Override
@@ -116,26 +162,27 @@ public class NavigationCardView extends CardView{
                     // Do this after expanded
                 }
 
-                getLayoutParams().width = (int) (initialWidth + (distanceToExpand * interpolatedTime));
-                requestLayout();
+                setScaleX((initialSize + (distanceToExpand * interpolatedTime)));
+                setScaleY((initialSize + (distanceToExpand * interpolatedTime)));
+                //requestLayout();
             }
 
-            @Override
+           /* @Override
             public boolean willChangeBounds() {
                 return true;
-            }
+            }*/
         };
 
-        a.setDuration((long) distanceToExpand);
+        a.setDuration(100);
         startAnimation(a);
     }
 
-    public void expand(int targetWidth) {
-        final int initialWidth = getMeasuredWidth();
+    public void expand(float targetSize) {
+        final float initialSize = getScaleX();
 
 
 
-        final int distanceToCollapse = (int) (initialWidth - targetWidth);
+        final float distanceToCollapse =  ( targetSize - initialSize);
 
         Animation a = new Animation() {
             @Override
@@ -146,18 +193,20 @@ public class NavigationCardView extends CardView{
 
 
 
-                getLayoutParams().width = (int) (initialWidth - (distanceToCollapse * interpolatedTime));
-                requestLayout();
+                setScaleX((initialSize + (distanceToCollapse * interpolatedTime)));
+                setScaleY((initialSize + (distanceToCollapse * interpolatedTime)));
+                //requestLayout();
             }
 
-            @Override
+           /* @Override
             public boolean willChangeBounds() {
                 return true;
-            }
+            }*/
         };
 
-        a.setDuration((long) distanceToCollapse);
+        a.setDuration(100);
         startAnimation(a);
-    }*/
+    }
+
 }
 

@@ -1,541 +1,382 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.philipp.tetheract.layouts.SmoothScroll xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
 
+    android:id="@+id/ShopScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:descendantFocusability="afterDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
     tools:context=".fragments.BlankFragment"
     >
     <!-- TODO: Update blank fragment layout -->
 
-    <ScrollView
+
+    <LinearLayout
+        android:id="@+id/ShopView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-    >
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:descendantFocusability="afterDescendants"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <LinearLayout
-            android:id="@+id/ShopView"
+            android:id="@+id/genre1"
             android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/gradientlinear"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:text="Action"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:clipChildren="false"
-            android:clipToPadding="false">
+            android:background="@drawable/gradienttransparent"
+            android:paddingLeft="1dp"
+            android:text="Action"
+            android:textColor="@color/white"
+            android:fontFamily="@font/motivasans"/>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_weight="1" />
+        <LinearLayout
+            android:id="@+id/genre3"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:orientation="horizontal">
+            android:orientation="horizontal">
 
 
-                <Button
-                    android:layout_width="5dp"
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradientlinear"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:text="Action"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <com.example.philipp.tetheract.layouts.BaseCard
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/gradientlinear"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:aString="Show more"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.6"
+                    android:src="@drawable/gradientlinear" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
                     android:background="@drawable/gradientlinear"
+                    android:backgroundTint="@drawable/controller_selector_color"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
-                    android:text="Genre" />
-
-                <com.example.philipp.tetheract.layouts.GameCardView
-                    android:id="@+id/feature1"
-                    android:layout_width="99dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_weight="0.6"
-                    android:animateLayoutChanges="true"
-                    android:animationCache="true"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    custom:cardBackgroundColor="@drawable/controller_selector_color">
-
-                    <FrameLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="1dp">
-
-                        <com.example.philipp.tetheract.layouts.ShopButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="1"
-                            android:adjustViewBounds="false"
-                            android:background="@android:color/background_light"
-                            android:backgroundTint="@drawable/controller_selector_color"
-                            android:filterTouchesWhenObscured="false"
-                            android:focusable="false"
-                            android:focusableInTouchMode="false"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/asphalt8"
-                            custom:downId=""
-                            custom:leftId="game1"
-                            custom:packageName="com.gameloft.android.ANMP.GloftA8HM"
-                            custom:rightId="game3"
-                            custom:upId="feature1" />
-
-                        <android.support.v7.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:alpha="1"
-                            android:scaleType="centerCrop"
-                            custom:srcCompat="@drawable/steam_bg_icon" />
-
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:layout_weight="1"
-
-                            android:background="@android:color/transparent"
-
-                            android:gravity="right|center_horizontal"
-                            android:paddingRight="2dp"
-                            android:text="2,00 $"
-                            android:textColor="@color/font"
-                            android:textSize="10sp" />
-
-                        <![CDATA[
-
-                        />
-                    ]]>
-                    </FrameLayout>
-                </com.example.philipp.tetheract.layouts.GameCardView>
-
-                <com.example.philipp.tetheract.layouts.GameCardView
-                    android:layout_width="69dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_weight="1"
-                    android:animateLayoutChanges="true"
-                    android:animationCache="true"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    app:cardBackgroundColor="@drawable/controller_selector_color">
-
-                    <FrameLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="1dp">
-
-                        <com.example.philipp.tetheract.layouts.ShopButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="1"
-                            android:adjustViewBounds="false"
-                            android:background="@android:color/background_light"
-                            android:backgroundTint="@drawable/controller_selector_color"
-                            android:filterTouchesWhenObscured="false"
-                            android:focusable="false"
-                            android:focusableInTouchMode="false"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/asphalt8"
-                            custom:downId=""
-                            custom:leftId="game1"
-                            custom:packageName="com.gameloft.android.ANMP.GloftA8HM"
-                            custom:rightId="game3"
-                            custom:upId="feature1" />
-
-                        <android.support.v7.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:alpha="1"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/steam_bg_icon" />
-
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:layout_weight="1"
-
-                            android:background="@android:color/transparent"
-
-                            android:gravity="right|center_horizontal"
-                            android:paddingRight="2dp"
-                            android:text="2,00 $"
-                            android:textColor="@color/font"
-                            android:textSize="10sp" />
-
-                        <![CDATA[
-
-                        />
-                    ]]>
-                    </FrameLayout>
-                </com.example.philipp.tetheract.layouts.GameCardView>
-
-                <com.example.philipp.tetheract.layouts.GameCardView
-                    android:layout_width="99dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_weight="0.6"
-                    android:animateLayoutChanges="true"
-                    android:animationCache="true"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    custom:cardBackgroundColor="@drawable/controller_selector_color">
-
-                    <FrameLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="1dp">
-
-                        <com.example.philipp.tetheract.layouts.ShopButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="1"
-                            android:adjustViewBounds="false"
-                            android:background="@android:color/background_light"
-                            android:backgroundTint="@drawable/controller_selector_color"
-                            android:filterTouchesWhenObscured="false"
-                            android:focusable="false"
-                            android:focusableInTouchMode="false"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/asphalt8"
-                            custom:downId=""
-                            custom:leftId="game1"
-                            custom:packageName="com.gameloft.android.ANMP.GloftA8HM"
-                            custom:rightId="game3"
-                            custom:upId="feature1" />
-
-                        <android.support.v7.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:alpha="1"
-                            android:scaleType="centerCrop"
-                            custom:srcCompat="@drawable/steam_bg_icon" />
-
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:layout_weight="1"
-
-                            android:background="@android:color/transparent"
-
-                            android:gravity="right|center_horizontal"
-                            android:paddingRight="2dp"
-                            android:text="2,00 $"
-                            android:textColor="@color/font"
-                            android:textSize="10sp" />
-
-                        <![CDATA[
-
-                        />
-                    ]]>
-                    </FrameLayout>
-                </com.example.philipp.tetheract.layouts.GameCardView>
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="15dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.1"
-                    android:background="@drawable/gradientlinear"
-                    app:cardBackgroundColor="@android:color/transparent">
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/gradientlinear" />
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.1"
-                        android:background="@drawable/gradientlinear"
-                        android:backgroundTint="@drawable/controller_selector_color"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:src="@android:drawable/ic_media_play" />
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="79dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:clipChildren="false"
-                android:clipToPadding="false">
-
-
-                <Button
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.6"
-                    android:background="@drawable/gradientlinear"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:text="Genre" />
-
-                <com.example.philipp.tetheract.layouts.GameCardView
-                    android:layout_width="113dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_weight="0.6"
-                    android:animateLayoutChanges="true"
-                    android:animationCache="true"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    custom:cardBackgroundColor="@drawable/controller_selector_color">
-
-                    <FrameLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="1dp">
-
-                        <com.example.philipp.tetheract.layouts.ShopButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="1"
-                            android:adjustViewBounds="false"
-                            android:background="@android:color/background_light"
-                            android:backgroundTint="@drawable/controller_selector_color"
-                            android:filterTouchesWhenObscured="false"
-                            android:focusable="false"
-                            android:focusableInTouchMode="false"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/asphalt8"
-                            custom:downId=""
-                            custom:leftId="game1"
-                            custom:packageName="com.gameloft.android.ANMP.GloftA8HM"
-                            custom:rightId="game3"
-                            custom:upId="feature1" />
-
-                        <android.support.v7.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:alpha="1"
-                            android:scaleType="centerCrop"
-                            custom:srcCompat="@drawable/steam_bg_icon" />
-
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:layout_weight="1"
-
-                            android:background="@android:color/transparent"
-
-                            android:gravity="right|center_horizontal"
-                            android:paddingRight="2dp"
-                            android:text="2,00 $"
-                            android:textColor="@color/font"
-                            android:textSize="10sp" />
-
-                        <![CDATA[
-
-                        />
-                    ]]>
-                    </FrameLayout>
-                </com.example.philipp.tetheract.layouts.GameCardView>
-
-                <com.example.philipp.tetheract.layouts.GameCardView
-                    android:layout_width="69dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_weight="1"
-                    android:animateLayoutChanges="true"
-                    android:animationCache="true"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    app:cardBackgroundColor="@drawable/controller_selector_color">
-
-                    <FrameLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="1dp">
-
-                        <com.example.philipp.tetheract.layouts.ShopButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="1"
-                            android:adjustViewBounds="false"
-                            android:background="@android:color/background_light"
-                            android:backgroundTint="@drawable/controller_selector_color"
-                            android:filterTouchesWhenObscured="false"
-                            android:focusable="false"
-                            android:focusableInTouchMode="false"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/asphalt8"
-                            custom:downId=""
-                            custom:leftId="game1"
-                            custom:packageName="com.gameloft.android.ANMP.GloftA8HM"
-                            custom:rightId="game3"
-                            custom:upId="feature1" />
-
-                        <android.support.v7.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:alpha="1"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/steam_bg_icon" />
-
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:layout_weight="1"
-
-                            android:background="@android:color/transparent"
-
-                            android:gravity="right|center_horizontal"
-                            android:paddingRight="2dp"
-                            android:text="2,00 $"
-                            android:textColor="@color/font"
-                            android:textSize="10sp" />
-
-                        <![CDATA[
-
-                        />
-                    ]]>
-                    </FrameLayout>
-                </com.example.philipp.tetheract.layouts.GameCardView>
-
-                <com.example.philipp.tetheract.layouts.GameCardView
-                    android:layout_width="102dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_weight="0.6"
-                    android:animateLayoutChanges="true"
-                    android:animationCache="true"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    custom:cardBackgroundColor="@drawable/controller_selector_color">
-
-                    <FrameLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="1dp">
-
-                        <com.example.philipp.tetheract.layouts.ShopButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="1"
-                            android:adjustViewBounds="false"
-                            android:background="@android:color/background_light"
-                            android:backgroundTint="@drawable/controller_selector_color"
-                            android:filterTouchesWhenObscured="false"
-                            android:focusable="false"
-                            android:focusableInTouchMode="false"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/asphalt8"
-                            custom:downId=""
-                            custom:leftId="game1"
-                            custom:packageName="com.gameloft.android.ANMP.GloftA8HM"
-                            custom:rightId="game3"
-                            custom:upId="feature1" />
-
-                        <android.support.v7.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:alpha="1"
-                            android:scaleType="centerCrop"
-                            custom:srcCompat="@drawable/steam_bg_icon" />
-
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom|left"
-                            android:layout_weight="1"
-
-                            android:background="@android:color/transparent"
-
-                            android:gravity="right|center_horizontal"
-                            android:paddingRight="2dp"
-                            android:text="2,00 $"
-                            android:textColor="@color/font"
-                            android:textSize="10sp" />
-
-                        <![CDATA[
-
-                        />
-                    ]]>
-                    </FrameLayout>
-                </com.example.philipp.tetheract.layouts.GameCardView>
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="15dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.1"
-                    android:background="@drawable/gradientlinear"
-                    custom:cardBackgroundColor="@android:color/transparent">
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/gradientlinear" />
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.1"
-                        android:background="@drawable/gradientlinear"
-                        android:backgroundTint="@drawable/controller_selector_color"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:src="@android:drawable/ic_media_play" />
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_weight="1" />
+                    android:src="@android:drawable/ic_media_play" />
+            </com.example.philipp.tetheract.layouts.BaseCard>
 
         </LinearLayout>
-    </ScrollView>
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/textView11"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradienttransparent"
+            android:paddingLeft="1dp"
+            android:text="Sports"
+            android:textColor="@color/white"
+            android:fontFamily="@font/motivasans"/>
+
+        <LinearLayout
+            android:id="@+id/genre2"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradientlinear"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Sports"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <com.example.philipp.tetheract.layouts.BaseCard
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/gradientlinear"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:aString="Show more"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gradientlinear" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="@drawable/gradientlinear"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:src="@android:drawable/ic_media_play" />
+            </com.example.philipp.tetheract.layouts.BaseCard>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradienttransparent"
+            android:paddingLeft="1dp"
+            android:text="Free To Play"
+            android:textColor="@color/white"
+            android:fontFamily="@font/motivasans"/>
+
+        <LinearLayout
+            android:id="@+id/genre6"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/gradientlinear"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Free To Play"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <com.example.philipp.tetheract.layouts.BaseCard
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/gradientlinear"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:aString="Show more"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gradientlinear" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="@drawable/gradientlinear"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:src="@android:drawable/ic_media_play" />
+            </com.example.philipp.tetheract.layouts.BaseCard>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView9"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradienttransparent"
+            android:paddingLeft="1dp"
+            android:text="Indie"
+            android:textColor="@color/white"
+            android:fontFamily="@font/motivasans"/>
+
+        <LinearLayout
+            android:id="@+id/genre4"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/gradientlinear"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Indie"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <com.example.philipp.tetheract.layouts.BaseCard
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/gradientlinear"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:aString="Show more"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gradientlinear" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="@drawable/gradientlinear"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:src="@android:drawable/ic_media_play" />
+            </com.example.philipp.tetheract.layouts.BaseCard>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradienttransparent"
+            android:fontFamily="@font/motivasans"
+            android:paddingLeft="1dp"
+            android:text="Classics"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/genre5"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/gradientlinear"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+
+                android:text="Classic"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+            <com.example.philipp.tetheract.layouts.BaseCard
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/gradientlinear"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:aString="Show more"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gradientlinear" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="@drawable/gradientlinear"
+                    android:backgroundTint="@drawable/controller_selector_color"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:src="@android:drawable/ic_media_play" />
+            </com.example.philipp.tetheract.layouts.BaseCard>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+</com.example.philipp.tetheract.layouts.SmoothScroll>

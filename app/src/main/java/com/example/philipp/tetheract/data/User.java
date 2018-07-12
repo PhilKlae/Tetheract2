@@ -14,7 +14,7 @@ public class User {
 
     public static User user;
 
-    User(Context context){
+    public User(Context context){
 
         final PackageManager pm = context.getPackageManager();
 //get a list of installed apps.
@@ -23,13 +23,14 @@ public class User {
         installedApps = new String [packages.size()][2];
         for (ApplicationInfo packageInfo : packages) {
             String TAG= "packages";
-            Log.d(TAG, "package :" + packageInfo.packageName);
-            Log.d(TAG, "name :" + packageInfo.loadLabel(context.getPackageManager()).toString());
+        /*    Log.d(TAG, "package :" + packageInfo.packageName);
+            Log.d(TAG, "name :" + packageInfo.loadLabel(context.getPackageManager()).toString());*/
 
 
             installedApps[counter][0] = packageInfo.loadLabel(context.getPackageManager()).toString();
             installedApps[counter][1] = packageInfo.packageName;
-
+            counter++;
+         //   Log.d("installed packages", "installed :" + installedApps[counter][1]);
 
         }
 
@@ -42,8 +43,12 @@ public class User {
     public boolean gameIsInLibrary(String packageName){
 
         for(int i=0;i<installedApps.length;i++){
-            if(installedApps[i][1].equals(packageName)){
-                return true;
+            //Log.d("installed packages", "installed :" + installedApps[i][1]);
+            if(installedApps[i][1]!=null){
+
+                if(installedApps[i][1].equals(packageName)){
+                    return true;
+                }
             }
         }
         return false;
