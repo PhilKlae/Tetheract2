@@ -94,6 +94,9 @@ public class NavigationCardView extends BaseCard{
             DrawableCompat.setTint(  ((ImageView)getChildAt(2)).getDrawable(), ContextCompat.getColor(getContext(), R.color.buttonTintHighlight));
         //    ((ImageView)getChildAt(2)).setColorFilter(R.color.buttonTintHighlight);
             setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    this.setElevation(50);
+                }
           //  setForeground(ResourcesCompat.getDrawable(getResources(), R.drawable.border, null));
            // drawGlow = true;
            /* LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
@@ -115,6 +118,9 @@ public class NavigationCardView extends BaseCard{
 
             ((FrameLayout)getChildAt(1)).setBackground(null);
             DrawableCompat.setTint(  ((ImageView)getChildAt(2)).getDrawable(), ContextCompat.getColor(getContext(), R.color.buttonTintNoHighlight));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                this.setElevation(0);
+            }
          //   drawGlow = false;
         //    setForeground(null);
 

@@ -214,7 +214,9 @@ public class GameCardView extends BaseCard{
 
         }else{
 
-            ((TextView)getChildAt(1)).setText(game.price + " $");
+                ((TextView)getChildAt(1)).setText(game.price + " $");
+
+
             buttonTooltips[0]="Buy Game";
         }
 

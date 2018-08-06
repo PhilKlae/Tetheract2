@@ -6,7 +6,13 @@
     "thumbnailName": "minecraftbig",
     "packageName": "com.mojang.minecraftpe",
     "Pricealt": "7.99",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe",
+    "Description": "Explore infinite worlds and build everything from the simplest of homes to the grandest of castles.\n\nPlay in creative mode with unlimited resources or mine deep into the world in survival mode, crafting weapons and armor to fend off dangerous mobs.\n\nCreate, explore and survive alone or with friends on mobile devices or Windows 10.",
+    "bigPictureName": "minecraftbigdetail",
+    "reviewstotal": "2,366,215",
+    "rating": "Very Positive",
+    "releasedate": "Jun 2010",
+    "tags": "Sandbox Adventure Crafting"
   },
   {
     "Genre": "Racing/Sports",
@@ -15,7 +21,13 @@
     "thumbnailName": "reckless3",
     "packageName": "com.pixelbite.rr3",
     "Pricealt": "2.49",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.pixelbite.rr3"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.pixelbite.rr3",
+    "Description": "Reckless Racing is back with dirtier racetracks, more epic power slides, eye-popping graphics and the largest selection of cars and trucks to date.\n\nPlay the career mode loaded with 60 events in 9 different seasons and the Arcade mode featuring 24 challenges, or compete on the online leaderboards in Single Event.\n\nReckless Racing 3 has the most detailed physics and complex graphics so far, giving you the smoothest racing experience ever.",
+    "bigPictureName": "recklessracingbig",
+    "reviewstotal": "17,806",
+    "rating": "Positive",
+    "releasedate": "November 2016",
+    "tags": "Pixelbite Racing"
   },
   {
     "Genre": "Action",
@@ -24,7 +36,13 @@
     "thumbnailName": "portalknights",
     "packageName": "com.and.games505.portal_knights",
     "Pricealt": "5.49",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.and.games505.portal_knights"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.and.games505.portal_knights",
+    "Description": "Prove yourself a Portal Knight by levelling up your character, crafting epic weapons, and vanquishing foes in real-time in this cooperative, 3D sandbox action RPG.\n\nExplore dozens of randomly-generated islands! Build almost anything!\n\nIn a world torn apart by the Fracture and terrorized by the Hollow King, you and your friends are its only hope!",
+    "bigPictureName": "portalknightsbig",
+    "reviewstotal": "9,501",
+    "rating": "Very Positive",
+    "releasedate": "May 2017",
+    "tags": "Action Adventure RPG Sandbox"
   },
   {
     "Genre": "Indie",
@@ -33,7 +51,13 @@
     "thumbnailName": "limbo",
     "packageName": "com.playdead.limbo.full",
     "Pricealt": "5.21",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.playdead.limbo.full"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.playdead.limbo.full",
+    "Description": "Uncertain of his sister's fate, a boy enters LIMBO ",
+    "bigPictureName": "limbobig",
+    "reviewstotal": "13,468",
+    "rating": "Very Positive",
+    "releasedate": "August 2011",
+    "tags": "Adventure Indie"
   },
   {
     "Genre": "Evergreens",
@@ -42,7 +66,13 @@
     "thumbnailName": "gtasanandreas",
     "packageName": "com.rockstargames.gtasager",
     "Pricealt": "7.99",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.rockstargames.gtasager"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.rockstargames.gtasager",
+    "Description": "Five years ago Carl Johnson has managed to escape the problems of Los Santos - a city in the state of San Andreas, which threatens to sink with gang trouble, drugs and corruption. One city, as well as we try in the movie stars and millionaires, the dealers and gangbangers to go out of the way.\n\nBut now - it's the early 90s - has Carl back and face his past. His mother has been murdered, his family has fallen apart and his childhood friends are about to slither on heading towards disaster.\n\nBut once back in his old home, a couple of corrupt cops frame him for homicide. CJ is forced on a journey ... that leads him throughout San Andreas, to save his family and to bring the roads under its control.\n\nRockstar Games presents his biggest game for mobile devices is a huge, open world that the state of San Andreas and its three major cities - Los Santos, San Fierro and Las Venturas - with enhanced visual presentation and more than 70 hours of gameplay.\n",
+    "bigPictureName": "gtabig",
+    "reviewstotal": "27,908",
+    "rating": "Positive",
+    "releasedate": "March 2015",
+    "tags": "Open World Rockstar Games Action"
   },
   {
     "Genre": "Free to play",
@@ -51,7 +81,13 @@
     "thumbnailName": "shadowgunsm",
     "packageName": "com.madfingergames.legends",
     "Pricealt": "Free to play",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.madfingergames.legends"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.madfingergames.legends",
+    "Description": "Download the best mobile RPG shooting game for free now!\n\nExperience an epic story campaign, competitive and cooperative multiplayer, and an innovative social hub, all in one game!\n\nIn the futuristic world of Shadowgun Legends, humanity is under attack from a deadly alien invader. The last line of defence are the Shadowguns, legendary warriors and heroes.\n\nYou are a young Shadowgun recruit with limitless potential who can turn the tide of war. So what are you waiting for? Join the fight and show the galaxy who’s boss!",
+    "bigPictureName": "shadowgunbigdetail",
+    "reviewstotal": "98,176",
+    "rating": "Very Positive",
+    "releasedate": "July 2016",
+    "tags": "Action MMO Shooter"
   },
   {
     "Genre": "Racing/Sports",
@@ -60,7 +96,13 @@
     "thumbnailName": "riptidegpren",
     "packageName": "com.vectorunit.silver.googleplay",
     "Pricealt": "2.99",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.vectorunit.silver.googleplay"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.vectorunit.silver.googleplay",
+    "Description": "Experience the future of illicit hydrojet racing, where armored riders kick out death-defying stunts over massive waterfalls, dodge cops through public waterways, and boost at breakneck speeds across surging waves.\n\nYou are a hydrojet rider, framed and cast out from the Riptide GP league, forced to race illegally through city waterways, flooded ruins, and churning factory machinery in an effort to reclaim your reputation and your title.\n\nPlay through the single player career to unlock new vehicles, playable characters, and customization features as you take down bosses and build your crew. Then, take your skills online for the ultimate test as you battle opponents around the world in 8-player online matches. Challenge your friends for leaderboard supremacy in the ghost-racing challenge mode. You can even play locally in split screen races with up to 4 players!\n\nRiptide GP: Renegade is the first game in the acclaimed Riptide GP series to be redesigned from the ground up specifically for modern desktop PC and console hardware. Featuring thrill-ride race tracks packed with shortcuts, secrets, and interactive obstacles, Riptide GP: Renegade is the action-arcade water racer for a new generation.",
+    "bigPictureName": "riptidebig",
+    "reviewstotal": "137",
+    "rating": "Very Positive",
+    "releasedate": "Jul 2016",
+    "tags": "Racing Action Multiplayer"
   },
   {
     "Genre": "Action",
@@ -69,16 +111,28 @@
     "thumbnailName": "leosfortune",
     "packageName": "com.leosfortune",
     "Pricealt": "5.49",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.leosfortune"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.leosfortune",
+    "Description": "Leo’s Fortune is an award-winning platform adventure game where you hunt down the cunning and mysterious thief that stole your gold. Beautifully hand-crafted levels bring the story of Leo to life in this epic adventure. \n“I just returned home to find all my gold has been stolen! For some devious purpose, the thief has dropped pieces of my gold like breadcrumbs through the woods. Despite this pickle of a trap, I am left with no choice but to follow the trail. Whatever lies ahead, I must recover my fortune.” -Leopold \n\nVOYAGE through lush environments from mossy forests and arid deserts, to pirate cities and snowy mountains.\n\nSURVIVE vicious traps and solve physics-based puzzles through 24 levels of treacherous adventure.\n\nFOLLOW the trail of gold and uncover the truth behind Leo’s stolen fortune.\n\nFinish Leo’s Fortune to unlock Hard-core Mode: try to beat the whole game without dying to unlock a special prize!\n",
+    "bigPictureName": "leosfortunebig",
+    "reviewstotal": "192",
+    "rating": "Very Positive",
+    "releasedate": "Sep 2015",
+    "tags": "Indie Adventure Platformer"
   },
   {
     "Genre": "Indie",
-    "title": "Goat Simulator",
-    "price": "4.99",
-    "thumbnailName": "goatsim",
-    "packageName": "com.coffeestainstudios.goatsimulator",
-    "Pricealt": "4.99",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.coffeestainstudios.goatsimulator"
+    "title": "Evoland 2",
+    "price": "7.99",
+    "thumbnailName": "evo2",
+    "packageName": "com.playdigious.evoland2",
+    "Pricealt": "7.99",
+    "Store Link": "https://play.google.com/store/apps/details?id=com.playdigious.evoland2&hl=en",
+    "Description": "Onboard on an epic RPG adventure of more than 20 hours through video games history filled with a ton of funny classical games references. \n\nFrom 2D RPG, through 3D vs fight to a shooter, a trading card game and more you’ll get your fill of jumping from a game genre to another, never bored. Evoland 2 is not only one game but many, backboned with a story that will make you travel through time, discovering different art styles and video gaming technology.\n\nReleased first on PC with 500.000 copies shipped, we’re proud to share with you this experience carefully adapted for Android devices.",
+    "bigPictureName": "evo2bg",
+    "reviewstotal": "1,391",
+    "rating": "Very Positive",
+    "releasedate": "Jun 2018",
+    "tags": "JRPG"
   },
   {
     "Genre": "Evergreens",
@@ -87,7 +141,13 @@
     "thumbnailName": "pacmandx",
     "packageName": "com.bandainamcoent.pacmancedx",
     "Pricealt": "4.99",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.bandainamcoent.pacmancedx"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.bandainamcoent.pacmancedx",
+    "Description": "Enjoy the world famous arcade videogame, PAC-MAN, for FREE! Earn high scores as you guide PAC-MAN through the maze to eat all the pac-dots and fruits while avoiding the pesky Ghost Gang! Or turn them blue by eating a power pellet to chomp on them!\n\nWho can forget the retro addictive gameplay of this pop culture icon? Remember all those countless hours of free time and quarters spent at the local arcade back in the 80's? Re-live those classic gaming moments on your mobile phone!\n\nPAC-MAN is the retro arcade game you know and love, now better than ever before! Join millions of fans and experience this classic along with new features such as original mazes, weekly tournaments, and token rewards!\n\nCLASSIC 8-BIT ARCADE ACTION\n• Play the original coin-op icon, PAC-MAN\n• Pixel perfect - Looks, sounds, and feels just like your remember!\n• Addictive old school gameplay - Run away or chase the ghosts!\n\nNEW MAZES\n• Unique challenges await with brand new mobile exclusive mazes!\n• Easy to learn, hard to master - Just one more game!\n• The definition of simple and timeless game design",
+    "bigPictureName": "pacmanbig",
+    "reviewstotal": "682,340",
+    "rating": "Positive",
+    "releasedate": "Apr 2014",
+    "tags": "Arcade"
   },
   {
     "Genre": "Free to play",
@@ -96,7 +156,13 @@
     "thumbnailName": "raymanl",
     "packageName": "com.ubisoft.raymanadventures",
     "Pricealt": "Free to play",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.ubisoft.raymanadventures"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.ubisoft.raymanadventures",
+    "Description": "The enchanted forest is in trouble - the Ancient Eggs that sustain the Sacred Tree have been stolen and scattered across the world. Embark on an amazing adventure through legendary worlds to help Rayman and his friends rescue Ancient Eggs to breathe new life into the Sacred Tree!\n\nAN EPIC PLATFORMER!\n· An exciting mix of timeless adventures and breathtaking visuals!\n· Over 55 playable characters - play as Rayman, Barbara, Globox, or Teensie!\n· Run, swim, hover, and take giant flying leaps as you dash through 200+ gorgeous levels!\n· Jump into the action - battle Minotaurs, Bandits, and many other monsters!\n\nEXPLORE VAST WORLDS!\n· Explore 7 extraordinary worlds in this action-packed Rayman 2D platformer!\n· Grow your Sacred Tree to unlock new adventures, and soar above the competition!\n\nMEET THE INCREDIBALLS!\n· Collect Incrediballs with 3 Special abilities - Seekers, Inhalers, and Protectors!\n· Feed the Incrediballs, and make music with them in the Beatbox Mode!\n· Complete more than 50 various Incrediball families!\n· Seek and collect over 320 unique Incrediballs!\n\nRun through various mysterious lands, haunted medieval castles, and the mythical worlds of Olympus, and unravel their hidden secrets!\n\nDownload this legendary free-to-play Rayman platformer game that takes you on an adventure unlike any other!",
+    "bigPictureName": "raymanbig",
+    "reviewstotal": "572,498",
+    "rating": "Very Positive",
+    "releasedate": "Jul 2017",
+    "tags": "Adventure Runner"
   },
   {
     "Genre": "Racing/Sports",
@@ -105,7 +171,13 @@
     "thumbnailName": "nbajam",
     "packageName": "com.eamobile.nbajam_row_wf",
     "Pricealt": "5.49",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.eamobile.nbajam_row_wf"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.eamobile.nbajam_row_wf",
+    "Description": "Jam with your favorite stars from all 30 NBA teams in over-the-top, high-flying, 2-on-2 arcade basketball just like you remember it – and like you’ve never seen before!\n\n** NBA JAM is a larger-than-life game (300MB+), so we strongly recommend connecting to WiFi before downloading. Trust us, this Jam is worth the wait.**\n\nPLAY NOW! PLAY CLASSIC! PLAY HEAD-TO-HEAD AGAINST A FRIEND!\n4 modes of play let you ball the way you want:\n• Play Now – Select a team and jump right into the ballgame.\n• Classic Campaign – Defeat all other teams to win the championship, and unlock legends, hidden players, and outrageous cheats.\n• Local Multiplayer – Go big head 2 big head against a friend via local WiFi or Bluetooth\n• Online Multiplayer – Challenge your Google+ friends to play head-to-head online (All online multiplayers must be updated to the latest version of NBA Jam for optimized gameplay).\n\n\nYOU’RE ON FIRE – ON GOOGLE PLAY!\nIf you’re from the Old School, you’ll feel the ‘90s nostalgia while you play the hottest arcade sports game on Google Play! Featuring the voice of Tim Kitzrow (the original NBA JAM play-by-play announcer), you’ll hear all the classic catchphrases plus a few new ones. This JAM is all about “boomshakalaka”- and beyond!\n\nSTAY CONNECTED!\nSync NBA Jam with your Google+ account to earn bragging rights with in-game achievements and track your high scores across friends and worldwide players via leaderboards.\nGo to the hole. Go strong. Go for the monster jam. KABOOM!",
+    "bigPictureName": "nbajambig",
+    "reviewstotal": "25,550",
+    "rating": "Positive",
+    "releasedate": "Jun 2017",
+    "tags": "Sports Action "
   },
   {
     "Genre": "Action",
@@ -114,7 +186,13 @@
     "thumbnailName": "legostarwars",
     "packageName": "com.wb.lego.tcs",
     "Pricealt": "6.99",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.wb.lego.tcs"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.wb.lego.tcs",
+    "Description": "Experience the entire collection that combines the original LEGO Star Wars: The Video Game and the sequel LEGO Star Wars II: The Original Trilogy for hours of epic Star Wars content and fun gameplay all from your Android device! Begin your adventure in Star Wars: Episode I The Phantom Menace and journey through all six episodes in the whimsical style and humor of LEGO. May the bricks be with you!\n\nThis game is filled with content! You’ll need 1.44gb of available space on your device if you install over wifi, but only 735mb of space if you download on your computer and then sync.\n\nAs with many large app installations, we advise that you restart your device after installing as this will resolve some stability issues. Also make sure you have installed the most recent firmware.\n\nThis is a high memory usage app. If you have performance issues, try closing down background apps or restarting the device.\n\nLEGO® Star Wars™: The Complete Saga is optimized for the following devices: Galaxy S3, Galaxy S4, Galaxy S5, Galaxy Note 2, Galaxy Note 10.1, Nexus 4, Nexus 7, Nexus 10, HTC One, LG G Pad 8.3, Xperia Z, and Xperia Tablet Z.\n\nFEATURES:\n\n36 STORY MODE LEVELS + BONUS CONTENT\n\nFrom the Trade Federation’s “negotiations” with Obi-Wan Kenobi and Qui-Gon Jinn in The Phantom Menace to the space battle above Endor in Return of the Jedi, play the most memorable and exhilarating scenes from your favorite episodes. Also unlock special bonus content featuring Bounty Hunter missions, a special Challenge Mode, Arcade Levels, and more!\n\nOVER 120 CHARACTERS\n\nPlay as your favorite Jedi Knight or Sith Lord! There are over 120 playable characters to unlock, including Luke Skywalker, Darth Vader, Han Solo, and Boba Fett.\n\nFORCE POWERS\n\nWhich side of the Force will you use? Both dark and light side characters have their own unique Force abilities. Will you use a Force Throw to defeat the Jedi or choose your Lightsaber and Force Push to take down the evil Empire?\n\nLEGO STYLE GAMEPLAY\n\nSmash objects into LEGO bricks and switch characters on the fly as you play through different story levels. Create your own Star Wars character mash-ups like Han Windu and Lando Amidala!\n\nDYNAMIC CONTROL STYLES\n\nSwitch between “Classic” and “Touch Screen” controls to find the play-style that suits you best.",
+    "bigPictureName": "legostarwarsbig",
+    "reviewstotal": "15,902",
+    "rating": "Positive",
+    "releasedate": "Feb 2016",
+    "tags": "Star Wars Action Lego"
   },
   {
     "Genre": "Indie",
@@ -123,7 +201,13 @@
     "thumbnailName": "beatbuddy",
     "packageName": "unity.threaks.beatbuddy.android",
     "Pricealt": "4.99",
-    "Store Link": "https://play.google.com/store/apps/details?id=unity.threaks.beatbuddy.android"
+    "Store Link": "https://play.google.com/store/apps/details?id=unity.threaks.beatbuddy.android",
+    "Description": "Awakened from his slumber, Beatbuddy journeys through lush hand-painted environments on a quest to save his companions and his own immortality. Beatbuddy interacts with the living breathing environment that pulses to the beat of an original soundtrack, aiding him as he unlocks new paths and solves puzzles.\n\nKEY FEATURES\n\n   Experience an action-adventure game in a whole new way, which incorporates music into every aspect of the beautiful world. Players interact with the environment and a variety of creatures to open paths and solve puzzles throughout their journey.\n\n   Six beautifully hand painted levels, each broken into five chapters, take the player through the unique locations and vivid color pallets. \n\n   Featuring an exclusively produced soundtrack with original songs composed specifically for the game by known artists including Austin Wintory, Parov Stelar, Sabrepulse and La Rochelle Band. \n\n   Play as Beatbuddy, an ethereal creature who travels to unite with his sisters Melody and Harmony and stop the evil Prince Maestro with the aid of Clef who provides comic relief throughout their journey.",
+    "bigPictureName": "beatbuddybig",
+    "reviewstotal": "347",
+    "rating": "Very Positive",
+    "releasedate": "Aug 2013",
+    "tags": "Indie Music Adventure"
   },
   {
     "Genre": "Evergreens",
@@ -132,15 +216,27 @@
     "thumbnailName": "metalslugx",
     "packageName": "com.dotemu.neogeo.mslugx",
     "Pricealt": "3.49",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.dotemu.neogeo.mslugx"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.dotemu.neogeo.mslugx",
+    "Description": "The masterpiece of 2D action-shooting, \"METAL SLUG X\", lands on Android! Foil General Morden's new coup attempt!!\n\nFeatures list:\n★A remake of \"METAL SLUG 2\"!\n\"METAL SLUG X\" is an updated version of \"METAL SLUG 2\" with a lot of new elements for even more fun and excitement!\nBosses and other enemy characters await you at different points on the battlefield, so that even players who have perfected the previous installment will enjoy this new and improved game map!\n\n★Shoot down your enemies with new weapons!!\nNew weapons, such as the \"Iron Lizard\" (remote-controlled missiles), the \"Drop Shot\" (bouncing landmines), and the \"Enemy Chaser\" (homing missiles), have been added to the impressive METAL SLUG arsenal.\n\n★An \"Arcade-Perfect\" NEOGEO Port with extra features!\nIn addition to the classic “ARCADE MODE”, you can select any mission you have previously cleared and play them separately in “MISSION MODE”. You can enjoy your favorite stages at will and train on the missions you have not mastered yet!\n\n★Precise and Customizable Controls!\nThe Autofire function allows you to fire continuously by holding down the Shot button. Moreover, you can change the position of your configuration outside of the game screen area in “Window” Mode. Enjoy every pixel of “METAL SLUG X” with your very own custom controls!\n\n★Engage into intense Multiplayer gameplay via Bluetooth!\nNow you can enjoy “METAL SLUG X” with a friend through a Bluetooth connection. Team up with a brother in arms to accomplish together the difficult missions available in “METAL SLUG X”!\n\n★Compatible with “SCORE LOOP”!\nComplete the maximum number of “ACHIEVEMENTS” in order to increase your \"METAL SLUG X\" Player Rank!\nBeat the best scores and become World’s Number 1!!",
+    "bigPictureName": "metalslugbig",
+    "reviewstotal": "5,245",
+    "rating": "Positive",
+    "releasedate": "March 2016",
+    "tags": "Action Arcade"
   },
   {
     "Genre": "Free to play",
-    "title": "Horizon Chase",
+    "title": "Zen Pinball",
     "price": "Free to play",
-    "thumbnailName": "horchase",
-    "packageName": "com.aquiris.horizonchase",
+    "thumbnailName": "zenpinball",
+    "packageName": "com.zenstudios.ZenPinball",
     "Pricealt": "Free to play",
-    "Store Link": "https://play.google.com/store/apps/details?id=com.aquiris.horizonchase"
+    "Store Link": "https://play.google.com/store/apps/details?id=com.zenstudios.ZenPinball",
+    "Description": "Zen Pinball features hit tables based on some of the biggest brands in entertainment, including Marvel Comics, Star Wars, ALIEN, The Walking Dead and more, Zen Pinball is your go-to place for all of your pinball cravings.\n\nFrom Zen Studios, the pioneers of the digital pinball space, Zen Pinball is your destination for exciting digital pinball action! Featuring both original tables and exclusive ones based on some of the hottest brands in entertainment, detailed 3D models, the most advanced ball physics available, rich social features, and hot seat multiplayer, Zen Pinball for Android devices continues the rich pinball tradition established by Zen Studios, the definitive leader in pinball videogames.\n\nZen Pinball sets a new standard for realistic ball physics and graphical detail in pinball video games employing cutting-edge visuals, challenging tables, true-to-life ball and table physics and combines them with innovative features not found in any other pinball game.\n\nWhat the Press Have to Say:\n\nI can't load up Pinball FX2 on Xbox Live Arcade without spending at least a couple of hours playing through every table once or twice as it is. Now they're giving me a table where experience points and loot carry over from game to game? Obviously Zen Studios is trying to kill me. – KOTAKU\n\nMarvel Pinball is a great add-on to an already excellent experience. If you grew up with pinball machines, this will no doubt recapture a love long lost with the collapse of arcades. If you never had the chance to experience pinball, now is as good a time as any. – IGN\n\nWe’re going to keep playing probably long after this review, and we’ll have no qualms ponying up for extra tables. Pinball heads unite – this is as good as it gets without having an actual table in your house. – GAMES RADAR\n\nYour Pinball Destination\n\nZen Pinball features dozens of tables, both original designs created by our development team, as well as many based on some of the hottest entertainment properties around. Fill out your collection today!\n\nFree Sorcerer’s Lair Table!\n\nZen Pinball comes with the beloved Sorcerer's Lair table completely free! Download the app for instant access to one of our most exciting tables.\n\nHottest Brands in Entertainment\n\nFeaturing hit tables based on some of the biggest brands in entertainment, including Marvel Comics, Star Wars, The Walking Dead, South Park and more, Zen Pinball is your go-to place for all of your pinball cravings.\n\nNew Tables Released Regularly!\n\nZen Pinball’s roster of exciting tables is frequently updated, so be sure to check the table menu for the latest and greatest from Zen Studios!\n\n Many Great Features!- Worldwide leaderboards and friend challenges\n- Table achievements\n- Rule sheets for each table, providing tips and tricks to help you boost your score\n- Pass the game around to friends as you compete for the top pinball wizard in Hot Seat multiplayer mode.",
+    "bigPictureName": "pinballbig",
+    "reviewstotal": "91,826",
+    "rating": "Positive",
+    "releasedate": "Jun 2017",
+    "tags": "Arcade Pinball Action"
   }
 ]

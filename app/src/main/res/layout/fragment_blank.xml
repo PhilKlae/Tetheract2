@@ -9,14 +9,12 @@
     android:id="@+id/ShopScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:clipChildren="false"
     android:clipToPadding="false"
     android:descendantFocusability="afterDescendants"
     android:focusable="false"
     android:focusableInTouchMode="false"
-    tools:context=".fragments.BlankFragment"
-    >
+    tools:context=".fragments.BlankFragment">
     <!-- TODO: Update blank fragment layout -->
 
 
@@ -63,10 +61,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/gradienttransparent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:fontFamily="@font/motivasans"
             android:paddingLeft="1dp"
             android:text="Action"
-            android:textColor="@color/white"
-            android:fontFamily="@font/motivasans"/>
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:id="@+id/genre3"
@@ -126,10 +126,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/gradienttransparent"
+            android:fontFamily="@font/motivasans"
             android:paddingLeft="1dp"
             android:text="Sports"
-            android:textColor="@color/white"
-            android:fontFamily="@font/motivasans"/>
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:id="@+id/genre2"
@@ -187,10 +187,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/gradienttransparent"
+            android:fontFamily="@font/motivasans"
             android:paddingLeft="1dp"
             android:text="Free To Play"
-            android:textColor="@color/white"
-            android:fontFamily="@font/motivasans"/>
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:id="@+id/genre6"
@@ -250,10 +250,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/gradienttransparent"
+            android:fontFamily="@font/motivasans"
             android:paddingLeft="1dp"
             android:text="Indie"
-            android:textColor="@color/white"
-            android:fontFamily="@font/motivasans"/>
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:id="@+id/genre4"

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
     android:background="@color/background"
     android:clipChildren="false"
     android:clipToPadding="false"
 
     android:orientation="vertical"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -52,6 +52,7 @@
                     android:focusable="false"
                     android:focusableInTouchMode="false"
                     android:scaleType="centerCrop"
+
                     app:srcCompat="@drawable/steam_bg_icon" />
 
                 <FrameLayout
@@ -93,13 +94,13 @@
                 app:cardBackgroundColor="@android:color/transparent">
 
                 <ImageView
-
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
                     android:scaleType="centerCrop"
+
                     app:srcCompat="@drawable/steam_bg_icon" />
 
                 <FrameLayout
@@ -142,13 +143,13 @@
                 app:cardBackgroundColor="@android:color/transparent">
 
                 <ImageView
-
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
                     android:scaleType="centerCrop"
+
                     app:srcCompat="@drawable/steam_bg_icon" />
 
                 <FrameLayout
@@ -189,13 +190,13 @@
                 app:cardBackgroundColor="@android:color/transparent">
 
                 <ImageView
-
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
                     android:scaleType="centerCrop"
+
                     app:srcCompat="@drawable/steam_bg_icon" />
 
                 <FrameLayout
@@ -233,7 +234,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:clipChildren="false"
-            android:clipToPadding="false" />
+            android:clipToPadding="false"
+            tools:layout="@layout/fragment_blank" />
 
     </LinearLayout>
 
@@ -241,7 +243,8 @@
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:layout_weight="1"
-        android:background="@color/buttonTintHighlight"
+        android:background="@color/highlight"
+        android:baselineAligned="true"
         android:gravity="bottom|right"
         android:orientation="horizontal"
         android:paddingLeft="15dp"

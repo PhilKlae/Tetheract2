@@ -5,21 +5,45 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff4081</color>
 
-    <color name="background">#0d273b</color>
-    <color name="iconTint">#13a9da</color>
-    <color name="headlineFont">#13a9da</color>
-    <color name="highlight">#a3cbe5</color>
-    <color name="font">#606d80</color>
-    <color name="button">#1d7096</color>
-    <color name="textBackground">#9c13a9da</color>
-    <color name="buttonTintNoHighlight">#1297c4</color>
-    <color name="buttonTintHighlight">#b4dff7</color>
-    <color name="fontLight">#65bef2</color>
-    <color name="detailbuttonendgradient">#133559</color>
-    <color name="detailbuttonstartgradient">#234a69</color>
-    <color name="detailGrey">#21323f</color>
-    <color name="detailNumbersGrey">#80a1b6</color>
-    <color name="detailTextBodyFontColor">#c5d3de</color>
-    <color name="detailFontGreen">#a1cd06</color>
+    <!--
+      <color name="background">#5E7994</color>
+      <color name="iconTint">#57BF30</color>
+      <color name="headlineFont">#57BF30</color>
+      <color name="highlight">#D1FAF8</color>
+      <color name="font">#C7AEAD</color>
+      <color name="button">#FBA893</color>
+      <color name="textBackground">#74FF41</color>
+      <color name="buttonTintNoHighlight">#92ADC7</color>
+      <color name="buttonTintHighlight">#D1FAF8</color>
+      <color name="fontLight">#C7AEAD</color>
+      <color name="detailbuttonendgradient">@color/highlight</color>
+      <color name="detailbuttonstartgradient">#92ADC7</color>
+      <color name="detailGrey">#92ADC7</color>
+      <color name="detailNumbersGrey">#80a1b6</color>
+      <color name="detailTextBodyFontColor">#c5d3de</color>
+      <color name="detailFontGreen">#FBA893</color>
+
+      <color name="buttongradstart">#C7AEAD</color>
+      <color name="buttongradend">#FBA893</color>
+   -->
+
+
+      <color name="background">#0d273b</color>
+      <color name="iconTint">#13a9da</color>
+      <color name="headlineFont">#13a9da</color>
+      <color name="highlight">#a3cbe5</color>
+      <color name="font">#606d80</color>
+      <color name="button">#1d7096</color>
+      <color name="textBackground">#9c13a9da</color>
+      <color name="buttonTintNoHighlight">#1297c4</color>
+      <color name="buttonTintHighlight">#b4dff7</color>
+      <color name="fontLight">#65bef2</color>
+      <color name="detailbuttonendgradient">#133559</color>
+      <color name="detailbuttonstartgradient">#234a69</color>
+      <color name="detailGrey">#21323f</color>
+      <color name="detailNumbersGrey">#80a1b6</color>
+      <color name="detailTextBodyFontColor">#c5d3de</color>
+      <color name="detailFontGreen">#a1cd06</color>
+
 
 </resources>

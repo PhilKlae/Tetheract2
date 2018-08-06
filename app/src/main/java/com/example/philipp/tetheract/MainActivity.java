@@ -30,6 +30,7 @@ import com.example.philipp.tetheract.layouts.BaseCard;
 import com.example.philipp.tetheract.layouts.GameCardView;
 import com.example.philipp.tetheract.layouts.NavigationCardView;
 import com.example.philipp.tetheract.layouts.ShopButton;
+import com.example.philipp.tetheract.services.PlayerService;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -142,6 +143,16 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
         navigationButtons[2]=(NavigationCardView) findViewById(R.id.Settings);
         navigationButtons[3]=(NavigationCardView) findViewById(R.id.Community);
 
+        for(int i=0;i<navigationButtons.length;i++){
+
+            navigationButtons[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getApplicationContext(), "Not implemented yet", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
         navigationBar=(LinearLayout) findViewById(R.id.Navigation);
 
         shopLayout =(LinearLayout) findViewById(R.id.ShopView);
@@ -185,6 +196,8 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
         //fragment stuff
         fm = getFragmentManager();
 
+        //start service
+        startService(new Intent(this, PlayerService.class));
     }
 
 
@@ -251,6 +264,13 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                 }
                 if(k.getKeyCode()==KeyEvent.KEYCODE_BUTTON_Y){
                     Intent intent = new Intent(this, GameDetailActivity.class);
+                    GameCardView focusedButton = (GameCardView) getCurrentFocus();
+
+                    if (focusedButton != null) {
+
+                        intent.putExtra("game",focusedButton.game);
+
+                    }
 
                     startActivity(intent);
                    /* ViewGroup fragmentContainer = findViewById(R.id.ShopFragmentView);
@@ -486,6 +506,28 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
                 visibleCardviews[i]=v;
 
+
+
+                v.setOnClickListener(new View.OnClickListener() {
+                    @Override public void onClick(View v) {
+                        // item clicked
+                        Game game = ((GameCardView)v).game;
+                      /*  if(game.isInLibrary){
+
+                            Intent LaunchIntent = getPackageManager().getLaunchIntentForPackage(game.packageName);
+                            startActivity(LaunchIntent);
+                        }else{
+                            try {
+                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + game.packageName)));
+                            } catch (android.content.ActivityNotFoundException anfe) {
+                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + game.packageName)));
+                            }
+                        }*/
+                        Intent intent = new Intent(getBaseContext(), GameDetailActivity.class);
+                        intent.putExtra("game",game);
+                        startActivity(intent);
+                    }
+                });
 
             }
 
