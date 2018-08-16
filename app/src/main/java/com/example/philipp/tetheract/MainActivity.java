@@ -6,17 +6,24 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
+import android.graphics.PixelFormat;
+import android.hardware.display.DisplayManager;
 import android.media.MediaPlayer;
+import android.media.MediaRouter;
+import android.net.RouteInfo;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.util.Log;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
@@ -30,6 +37,7 @@ import com.example.philipp.tetheract.layouts.BaseCard;
 import com.example.philipp.tetheract.layouts.GameCardView;
 import com.example.philipp.tetheract.layouts.NavigationCardView;
 import com.example.philipp.tetheract.layouts.ShopButton;
+import com.example.philipp.tetheract.services.MultiDisplayService;
 import com.example.philipp.tetheract.services.PlayerService;
 
 import org.json.JSONArray;
@@ -68,6 +76,8 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
     private FragmentManager fm;
     private FragmentTransaction ft;
 
+    Handler handler;
+
     public enum NavigationStatus{
 
         main,
@@ -99,12 +109,65 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
         super.onCreate(savedInstanceState);
 
+     //   startService(new Intent(this, MultiDisplayService.class));
 
         //initialize user
         user = new User((Context)this);
 
+        DisplayManager dm = (DisplayManager)getApplicationContext().getSystemService(DISPLAY_SERVICE);
 
+       /* if (dm != null) {
+            Display dispArray[] = dm.getDisplays(DisplayManager.DISPLAY_CATEGORY_PRESENTATION);
+            Toast.makeText(this, "asdad " + dispArray.length, Toast.LENGTH_LONG).show();
+            if (dispArray.length > 0) {
+                Display display = dispArray[0];
+                Context displayContext = getApplicationContext().createDisplayContext(display);
+                WindowManager wm = (WindowManager)displayContext.getSystemService(WINDOW_SERVICE);
+                View view = LayoutInflater.from(displayContext).inflate(R.layout.activity_main,null);
+                final WindowManager.LayoutParams params = new WindowManager.LayoutParams(
+                        WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                        WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                        WindowManager.LayoutParams.TYPE_TOAST,
+                        WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+                        PixelFormat.TRANSLUCENT);
+                wm.addView(view, params);
+                //Log.e("asdads", "Service using display:" + display.getName());
+               // Context displayContext = getApplicationContext().createDisplayContext(display);
+            }else{
+
+                setContentView(R.layout.activity_main);
+            }
+
+        }*/
         setContentView(R.layout.activity_main);
+
+
+
+        DisplayManager.DisplayListener mDisplayListener = new DisplayManager.DisplayListener() {
+            @Override
+            public void onDisplayAdded(int displayId) {
+                WindowManager.LayoutParams params = getWindow().getAttributes();
+                params.screenBrightness = 0f;
+                getWindow().setAttributes(params);
+                android.util.Log.i("Display", "Display #" + displayId + " added.");
+            }
+
+            @Override
+            public void onDisplayChanged(int displayId) {
+                android.util.Log.i("Display", "Display #" + displayId + " changed.");
+            }
+
+            @Override
+            public void onDisplayRemoved(int displayId) {
+                WindowManager.LayoutParams params = getWindow().getAttributes();
+                params.screenBrightness = 1.0f;
+                getWindow().setAttributes(params);
+            }
+        };
+        DisplayManager displayManager = (DisplayManager) getApplicationContext().getSystemService(Context.DISPLAY_SERVICE);
+        handler = new Handler();
+        displayManager.registerDisplayListener(mDisplayListener, handler);
+
       //  setRequestedOrientation(SCREEN_ORIENTATION_LANDSCAPE);
         decorView = getWindow().getDecorView();
 // Hide both the navigation bar and the status bar.
@@ -545,5 +608,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
         }
 
     }
+
+
 
 }

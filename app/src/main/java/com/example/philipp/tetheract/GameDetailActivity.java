@@ -1,15 +1,20 @@
 package com.example.philipp.tetheract;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.hardware.display.DisplayManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +27,7 @@ import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 public class GameDetailActivity extends AppCompatActivity {
     View decorView;
     Game game;
+    Handler handler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +69,44 @@ public class GameDetailActivity extends AppCompatActivity {
 
         findViewById(R.id.ImageSlider).requestFocus();
         setUpViews();
+        DisplayManager dm = (DisplayManager)getApplicationContext().getSystemService(DISPLAY_SERVICE);
+        if (dm != null){
+            Display dispArray[] = dm.getDisplays(DisplayManager.DISPLAY_CATEGORY_PRESENTATION);
+
+            if (dispArray.length>0) {
+                WindowManager.LayoutParams params = getWindow().getAttributes();
+                params.screenBrightness = 0f;
+                getWindow().setAttributes(params);
+            }
+        }
+
+        DisplayManager.DisplayListener mDisplayListener = new DisplayManager.DisplayListener() {
+            @Override
+            public void onDisplayAdded(int displayId) {
+                WindowManager.LayoutParams params = getWindow().getAttributes();
+                params.screenBrightness = 0f;
+                getWindow().setAttributes(params);
+                android.util.Log.i("Display", "Display #" + displayId + " added.");
+            }
+
+            @Override
+            public void onDisplayChanged(int displayId) {
+                android.util.Log.i("Display", "Display #" + displayId + " changed.");
+            }
+
+            @Override
+            public void onDisplayRemoved(int displayId) {
+                WindowManager.LayoutParams params = getWindow().getAttributes();
+                params.screenBrightness = 1.0f;
+                getWindow().setAttributes(params);
+            }
+        };
+        DisplayManager displayManager = (DisplayManager) getApplicationContext().getSystemService(Context.DISPLAY_SERVICE);
+        handler = new Handler();
+        displayManager.registerDisplayListener(mDisplayListener, handler);
+
+
+
     }
 
 
