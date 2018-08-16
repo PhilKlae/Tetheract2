@@ -470,6 +470,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
             JSONArray jsonArray = new JSONArray(jsonString);
             LayoutInflater vi =getLayoutInflater();
             visibleCardviews = new GameCardView[jsonArray.length()];
+            ViewGroup shopView = findViewById(R.id.ShopView);
 
             for(int i=0;i<jsonArray.length();i++){
           //  for(int i=0;i<2;i++){
@@ -497,12 +498,14 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                 }
 
                 TableLayout.LayoutParams params = new TableLayout.LayoutParams(725, ViewGroup.LayoutParams.MATCH_PARENT,1);
-
+                //TableLayout.LayoutParams params = new TableLayout.LayoutParams()
                 params.setMargins(10,0,10,0);
                 insertPoint.addView(v, 1, params);
                 //vi.inflate(R.layout.game_card_layout,insertPoint);
                //v.game = game;
                 v.setGame(game);
+                v.parentparent = shopView;
+                v.parentIndex = shopView.indexOfChild(insertPoint);
 
                 visibleCardviews[i]=v;
 

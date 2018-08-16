@@ -18,7 +18,7 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <LinearLayout
+    <com.example.philipp.tetheract.layouts.ControlledDrawningOrderLayout
         android:id="@+id/ShopView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -376,7 +376,7 @@
             android:layout_height="10dp"
             android:layout_weight="1" />
 
-    </LinearLayout>
+    </com.example.philipp.tetheract.layouts.ControlledDrawningOrderLayout>
 
 
 </com.example.philipp.tetheract.layouts.SmoothScroll>

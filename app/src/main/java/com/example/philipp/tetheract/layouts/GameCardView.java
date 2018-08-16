@@ -45,6 +45,8 @@ public class GameCardView extends BaseCard{
     String title;
     String packageName;
     Bitmap image;
+    public int parentIndex=0;
+    public ViewGroup parentparent;
 
     public boolean zoom = true;
     ScrollView shopScrollView;
@@ -104,7 +106,7 @@ public class GameCardView extends BaseCard{
 
         if(gainFocus){
 
-
+            ((ControlledDrawningOrderLayout)(parentparent)).setChildDrawLast(parentIndex);
 
             ((MainActivity)getContext()).updateButtonTooltips(this);
             ((MainActivity)getContext()).lastSlectedCardView=this;
@@ -120,6 +122,9 @@ public class GameCardView extends BaseCard{
             }
 
         }else{
+
+
+
             ((TextView)(getChildAt(1))).setTextColor(getResources().getColor(R.color.font));
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -226,13 +231,31 @@ public class GameCardView extends BaseCard{
                 getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 if(game.thumbnailPath !=null&&!game.thumbnailPath.equals("")){
                     int resId = getResources().getIdentifier(game.thumbnailPath, "drawable", getContext().getPackageName());
+                    if(zoom){
+                     /*   Log.d("layout", "onGlobalLayout before : width: " + getWidth() + " , height: " + getHeight());
+                        setLayoutParams(new LinearLayout.LayoutParams(getWidth(), (int)((float)(getWidth()*0.5))));
+                        requestLayout();
+
+                        Log.d("layout", "onGlobalLayout after: width: " + getWidth() + " , height: " + getHeight());
+
+TODO
+*/
+
+
+
+                    }
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
                         image = BitmapFactory.decodeResource(getContext().getResources(), resId);
                         image = scaleDown(image,getWidth()-2,false);
                         ((ImageView)getChildAt(0)).setImageBitmap(image);
                     }
-                }            }
+
+
+
+                }
+            }
         });
 
 
@@ -260,5 +283,14 @@ public class GameCardView extends BaseCard{
                 height, filter);
         return newBitmap;
     }
+    /*@Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
+            // set the image views size
+            int width = MeasureSpec.getSize(widthMeasureSpec);
+            int height = (int) (width * 0.6);
+            setMeasuredDimension(width, height);
+
+
+    }*/
 }
