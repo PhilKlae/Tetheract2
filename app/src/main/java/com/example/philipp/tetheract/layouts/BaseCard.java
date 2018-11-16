@@ -75,7 +75,7 @@ public class BaseCard extends CardView {
 
         if(gainFocus){
             try {
-                ((MainActivity) getContext()).playSound("activation");
+              //  ((MainActivity) getContext()).playSound("activation"); SOUND
 
             }catch(Exception e){
 

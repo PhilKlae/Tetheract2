@@ -8,8 +8,10 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
 import android.graphics.PixelFormat;
 import android.hardware.display.DisplayManager;
+import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.media.MediaRouter;
+import android.media.PlaybackParams;
 import android.net.RouteInfo;
 import android.net.Uri;
 import android.os.Handler;
@@ -47,6 +49,7 @@ import java.io.FileDescriptor;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
+import java.util.Random;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 
@@ -95,10 +98,12 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
     public static boolean playedChangeSound=false;
 
+    public Random random;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
+        random = new Random();
      /*   //Remove title bar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
@@ -231,7 +236,9 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
 
         //Load sound Files
-        focusChangeAsset = getResources().openRawResourceFd(R.raw.txting_type_fail);
+
+        //focusChangeAsset = getResources().openRawResourceFd(R.raw.txting_type_fail);
+        focusChangeAsset = getResources().openRawResourceFd(R.raw.activation);
         focusChangeFile = focusChangeAsset.getFileDescriptor();
 
         activationAsset = getResources().openRawResourceFd(R.raw.activation);
@@ -261,6 +268,8 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
         //start service
         startService(new Intent(this, PlayerService.class));
+
+
     }
 
 
@@ -384,7 +393,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
     public void swapNavigationFocus(){
 
 
-      playSound("focusChange");
+     // playSound("focusChange"); SOUND
         playedChangeSound=true;
 
         if(navigationStatus == NavigationStatus.main){
@@ -445,7 +454,9 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
     }
 
     public void playSound(String sound){
+
         MediaPlayer player = new MediaPlayer();
+
 
 
         if(sound.equals("focusChange")){
@@ -453,6 +464,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
             try {
                 player.setDataSource(activationFile, activationAsset.getStartOffset(),
                         activationAsset.getLength());
+
                 player.setLooping(false);
                 player.prepare();
                 player.start();
@@ -469,9 +481,15 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                 return;
             }
             try {
+
                 player.setDataSource(focusChangeFile, focusChangeAsset.getStartOffset(), focusChangeAsset.getLength());
                 player.setLooping(false);
                 player.prepare();
+
+                PlaybackParams params = new PlaybackParams();
+                params.setPitch(random.nextFloat());
+                player.setPlaybackParams(params);
+
                 player.start();
 
             } catch (IOException ex) {

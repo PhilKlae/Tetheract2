@@ -24,8 +24,6 @@
     >
 
 
-
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="85dp"
@@ -61,14 +59,14 @@
 
         android:background="@android:color/transparent"
 
-        android:gravity="right"
+        android:fontFamily="@a"
+
+        android:gravity="right|center_vertical"
 
         android:paddingRight="3dp"
-
         android:text="2,00 $"
         android:textColor="@color/font"
-        android:textSize="10sp"
-        android:fontFamily="@a"/>
+        android:textSize="10sp" />
 
 
 
