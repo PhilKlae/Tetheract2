@@ -10,7 +10,7 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     app:cardElevation="0dp"
-
+    android:transitionName="img"
     app:packageName="com.gameloft.android.ANMP.GloftA8HM"
     app:price="3,00$"
     app:title="Asphalt 8"
@@ -25,9 +25,9 @@
 
 
     <ImageView
+
         android:layout_width="match_parent"
         android:layout_height="85dp"
-
         android:layout_gravity="top"
         android:adjustViewBounds="false"
         android:background="@android:color/background_light"
@@ -36,7 +36,6 @@
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:foregroundGravity="top"
-
         android:scaleType="fitXY"
         android:src="@drawable/limbo" />
     <!-- fix this, might stretch artworks android:scaleType="fitXY"

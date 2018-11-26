@@ -22,28 +22,63 @@
       <color name="detailNumbersGrey">#80a1b6</color>
       <color name="detailTextBodyFontColor">#c5d3de</color>
       <color name="detailFontGreen">#FBA893</color>
-
       <color name="buttongradstart">#C7AEAD</color>
       <color name="buttongradend">#FBA893</color>
    -->
 
+    <!--
+        <color name="background">#0d273b</color>
+        <color name="iconTint">#13a9da</color>
+        <color name="headlineFont">#13a9da</color>
+        <color name="highlight">#a3cbe5</color>
+        <color name="font">#606d80</color>
+        <color name="button">#1d7096</color>
+        <color name="textBackground">#9c13a9da</color>
+        <color name="buttonTintNoHighlight">#1297c4</color>
+        <color name="buttonTintHighlight">#b4dff7</color>
+        <color name="fontLight">#65bef2</color>
+        <color name="detailbuttonendgradient">#133559</color>
+        <color name="detailbuttonstartgradient">#234a69</color>
+        <color name="detailGrey">#21323f</color>
+        <color name="detailNumbersGrey">#80a1b6</color>
+        <color name="detailTextBodyFontColor">#c5d3de</color>
+        <color name="detailFontGreen">#a1cd06</color>
+     -->
+    <color name="background">#7fb1b2</color>
+    <color name="navbuttonback">#485d70</color>
+    <color name="iconTint">#13a9da</color>
+    <color name="headlineFont">#13a9da</color>
+    <color name="highlight">#92c46d</color>
 
-      <color name="background">#0d273b</color>
-      <color name="iconTint">#13a9da</color>
-      <color name="headlineFont">#13a9da</color>
-      <color name="highlight">#a3cbe5</color>
-      <color name="font">#606d80</color>
-      <color name="button">#1d7096</color>
-      <color name="textBackground">#9c13a9da</color>
-      <color name="buttonTintNoHighlight">#1297c4</color>
-      <color name="buttonTintHighlight">#b4dff7</color>
-      <color name="fontLight">#65bef2</color>
-      <color name="detailbuttonendgradient">#133559</color>
-      <color name="detailbuttonstartgradient">#234a69</color>
-      <color name="detailGrey">#21323f</color>
-      <color name="detailNumbersGrey">#80a1b6</color>
-      <color name="detailTextBodyFontColor">#c5d3de</color>
-      <color name="detailFontGreen">#a1cd06</color>
+    <color name="tooltipBar">#485d70</color>
+    <color name="tooltipFont">#7fb1b2</color>
 
 
-</resources>
+    <color name="morebuttonstart">#1c344e</color>
+    <color name="morebuttonend">#539798</color>
+
+    <color name="genrestart">#485d70</color>
+    <color name="textBackground">#9c13a9da</color>
+
+    <color name="buttonTintNoHighlight">#7fb1b2</color>
+    <color name="buttonTintHighlight">#92c46d</color>
+    <color name="fontLight">#65bef2</color>
+
+    <color name="gamecardhighlightbackground">#485d70</color>
+    <color name="gamecardfonthighlight">#f0f0f0</color>
+    <color name="font">#788595</color>
+
+    <color name="navbuttongradientstart">#92c46d</color>
+
+
+
+    <color name="detailbuttonendgradient">#1c344e</color>
+    <color name="detailbuttonstartgradient">#485d70</color>
+    <color name="detailGrey">#788595</color>
+    <color name="detailNumbersGrey">#7fb1b2</color>
+    <color name="detailTextBodyFontColor">#9c13a9da</color>
+    <color name="detailFontGreen">#92c46d</color>
+
+
+
+  </resources>

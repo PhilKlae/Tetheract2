@@ -61,6 +61,7 @@
                 android:orientation="vertical">
 
                 <com.example.philipp.tetheract.layouts.BaseCard
+                    android:transitionName="img"
                     android:id="@+id/ImageSlider"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

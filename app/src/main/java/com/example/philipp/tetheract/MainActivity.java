@@ -1,5 +1,6 @@
 package com.example.philipp.tetheract;
 
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -15,6 +16,7 @@ import android.media.PlaybackParams;
 import android.net.RouteInfo;
 import android.net.Uri;
 import android.os.Handler;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -343,8 +345,9 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                         intent.putExtra("game",focusedButton.game);
 
                     }
-
-                    startActivity(intent);
+                    ActivityOptionsCompat options = ActivityOptionsCompat.
+                            makeSceneTransitionAnimation(this, (View)focusedButton, "img");
+                    startActivity(intent,options.toBundle());
                    /* ViewGroup fragmentContainer = findViewById(R.id.ShopFragmentView);
                     ft.remove (getFragmentManager().findFragmentById(R.id.ShopFragmentView));
                     ft.commit();*/
@@ -609,6 +612,8 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                         }*/
                         Intent intent = new Intent(getBaseContext(), GameDetailActivity.class);
                         intent.putExtra("game",game);
+
+
                         startActivity(intent);
                     }
                 });

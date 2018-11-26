@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:fontFamily">@font/motivasans</item>
         <item name="fontFamily">@font/motivasans</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -16,6 +17,7 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:fontFamily">@font/motivasans</item>
         <item name="fontFamily">@font/motivasans</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
 

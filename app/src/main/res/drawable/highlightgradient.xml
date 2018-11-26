@@ -4,7 +4,7 @@
 
     <gradient
 
-        android:endColor="#e7b4dff7"
+        android:endColor="@color/navbuttongradientstart"
         android:gradientRadius="300"
         android:startColor="#00000000"
         android:type="radial" >
