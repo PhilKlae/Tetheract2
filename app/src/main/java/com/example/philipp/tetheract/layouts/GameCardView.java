@@ -110,7 +110,7 @@ public class GameCardView extends BaseCard{
 
             ((MainActivity)getContext()).updateButtonTooltips(this);
             ((MainActivity)getContext()).lastSlectedCardView=this;
-            ((TextView)(getChildAt(1))).setTextColor(getResources().getColor(R.color.white));
+            ((TextView)(getChildAt(1))).setTextColor(getResources().getColor(R.color.gamecardfonthighlight));
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 this.setElevation(50);

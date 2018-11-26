@@ -68,7 +68,7 @@ public class GameDetailActivity extends AppCompatActivity {
 
 
         findViewById(R.id.ImageSlider).requestFocus();
-        setUpViews();
+  setUpViews();
         DisplayManager dm = (DisplayManager)getApplicationContext().getSystemService(DISPLAY_SERVICE);
         if (dm != null){
             Display dispArray[] = dm.getDisplays(DisplayManager.DISPLAY_CATEGORY_PRESENTATION);
@@ -105,16 +105,13 @@ public class GameDetailActivity extends AppCompatActivity {
         handler = new Handler();
         displayManager.registerDisplayListener(mDisplayListener, handler);
 
-
-
-    }
+  }
 
 
     public void setUpViews(){
 
         ((TextView)findViewById(R.id.GameTitle)).setText(game.title.toUpperCase());
         ((TextView)findViewById(R.id.BuyGameTitle)).setText("Buy "+ game.title.toUpperCase());
-
 
         if(game.isInLibrary){
 

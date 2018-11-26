@@ -9,8 +9,8 @@
     android:clipToPadding="false"
 
     android:orientation="vertical"
-    android:paddingEnd="20dp"
-    android:paddingStart="20dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -53,6 +53,7 @@
                     android:focusableInTouchMode="false"
                     android:scaleType="centerCrop"
 
+                    android:tint="@color/navbuttonback"
                     app:srcCompat="@drawable/steam_bg_icon" />
 
                 <FrameLayout
@@ -101,6 +102,7 @@
                     android:focusableInTouchMode="false"
                     android:scaleType="centerCrop"
 
+                    android:tint="@color/navbuttonback"
                     app:srcCompat="@drawable/steam_bg_icon" />
 
                 <FrameLayout
@@ -150,6 +152,7 @@
                     android:focusableInTouchMode="false"
                     android:scaleType="centerCrop"
 
+                    android:tint="@color/navbuttonback"
                     app:srcCompat="@drawable/steam_bg_icon" />
 
                 <FrameLayout
@@ -164,7 +167,7 @@
                 <ImageView
 
                     android:layout_width="50dp"
-                    android:layout_height="110dp"
+                    android:layout_height="113dp"
                     android:layout_gravity="center_vertical"
                     android:background="@android:color/transparent"
                     android:backgroundTint="@drawable/controller_selector_color"
@@ -197,6 +200,7 @@
                     android:focusableInTouchMode="false"
                     android:scaleType="centerCrop"
 
+                    android:tint="@color/navbuttonback"
                     app:srcCompat="@drawable/steam_bg_icon" />
 
                 <FrameLayout
@@ -243,7 +247,7 @@
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:layout_weight="1"
-        android:background="@color/highlight"
+        android:background="@color/tooltipBar"
         android:baselineAligned="true"
         android:gravity="bottom|right"
         android:orientation="horizontal"
@@ -277,7 +281,8 @@
                 android:gravity="left|center_vertical"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="@color/tooltipFont" />
 
         </LinearLayout>
 
@@ -308,7 +313,8 @@
                 android:gravity="left|center_vertical"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="@color/tooltipFont" />
         </LinearLayout>
 
         <LinearLayout
@@ -337,7 +343,8 @@
                 android:gravity="left|center_vertical"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
-                android:text="langer texxxxxxxt" />
+                android:text="langer texxxxxxxt"
+                android:textColor="@color/tooltipFont" />
         </LinearLayout>
 
         <LinearLayout
@@ -366,7 +373,8 @@
                 android:gravity="left|center_vertical"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="@color/tooltipFont" />
         </LinearLayout>
     </LinearLayout>
 

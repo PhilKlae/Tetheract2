@@ -43,7 +43,7 @@
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:gravity="center"
@@ -52,17 +52,33 @@
                 android:textSize="10dp"
                 android:visibility="gone" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/gradienttransparent"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:fontFamily="@font/motivasans"
-            android:paddingLeft="1dp"
-            android:text="Action"
-            android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradienttransparent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:fontFamily="@font/motivasans"
+                android:paddingLeft="1dp"
+                android:text="Action"
+                android:textColor="@color/gamecardfonthighlight" />
+
+
+            <android.support.v7.widget.ContentFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/genrestart"
+                android:foreground="@color/genrestart"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/genre3"
@@ -77,7 +93,7 @@
             <Button
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:gravity="center"
@@ -91,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 app:aString="Show more"
@@ -101,13 +117,13 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/gradientlinear" />
+                    android:src="@drawable/morebutton" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
-                    android:background="@drawable/gradientlinear"
+                    android:background="@drawable/morebutton"
                     android:backgroundTint="@drawable/controller_selector_color"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
@@ -115,17 +131,34 @@
             </com.example.philipp.tetheract.layouts.BaseCard>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView11"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/gradienttransparent"
-            android:fontFamily="@font/motivasans"
-            android:paddingLeft="1dp"
-            android:text="Sports"
-            android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/textView11"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradienttransparent"
+                android:fontFamily="@font/motivasans"
+                android:paddingLeft="1dp"
+                android:text="Sports"
+                android:textColor="@color/gamecardfonthighlight" />
+
+
+            <android.support.v7.widget.ContentFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/genrestart"
+                android:foreground="@color/genrestart"/>
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/genre2"
@@ -140,7 +173,7 @@
             <Button
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:text="Sports"
@@ -153,7 +186,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 app:aString="Show more"
@@ -163,13 +196,13 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/gradientlinear" />
+                    android:src="@drawable/morebutton" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
-                    android:background="@drawable/gradientlinear"
+                    android:background="@drawable/morebutton"
                     android:backgroundTint="@drawable/controller_selector_color"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
@@ -177,16 +210,33 @@
             </com.example.philipp.tetheract.layouts.BaseCard>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/gradienttransparent"
-            android:fontFamily="@font/motivasans"
-            android:paddingLeft="1dp"
-            android:text="Free To Play"
-            android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradienttransparent"
+                android:fontFamily="@font/motivasans"
+                android:paddingLeft="1dp"
+                android:text="Free To Play"
+                android:textColor="@color/gamecardfonthighlight" />
+
+
+            <android.support.v7.widget.ContentFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/genrestart"
+                android:foreground="@color/genrestart"/>
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/genre6"
@@ -202,7 +252,7 @@
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:text="Free To Play"
@@ -215,7 +265,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 app:aString="Show more"
@@ -225,13 +275,13 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/gradientlinear" />
+                    android:src="@drawable/morebutton" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
-                    android:background="@drawable/gradientlinear"
+                    android:background="@drawable/morebutton"
                     android:backgroundTint="@drawable/controller_selector_color"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
@@ -239,17 +289,34 @@
             </com.example.philipp.tetheract.layouts.BaseCard>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView9"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/gradienttransparent"
-            android:fontFamily="@font/motivasans"
-            android:paddingLeft="1dp"
-            android:text="Indie"
-            android:textColor="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradienttransparent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:fontFamily="@font/motivasans"
+                android:paddingLeft="1dp"
+                android:text="Action"
+                android:textColor="@color/gamecardfonthighlight" />
+
+
+            <android.support.v7.widget.ContentFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/genrestart"
+                android:foreground="@color/genrestart"/>
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/genre4"
@@ -265,7 +332,7 @@
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:text="Indie"
@@ -278,7 +345,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 app:aString="Show more"
@@ -288,13 +355,13 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/gradientlinear" />
+                    android:src="@drawable/morebutton" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
-                    android:background="@drawable/gradientlinear"
+                    android:background="@drawable/morebutton"
                     android:backgroundTint="@drawable/controller_selector_color"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
@@ -302,17 +369,34 @@
             </com.example.philipp.tetheract.layouts.BaseCard>
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView8"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/gradienttransparent"
-            android:fontFamily="@font/motivasans"
-            android:paddingLeft="1dp"
-            android:text="Classics"
-            android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/textView8"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradienttransparent"
+                android:fontFamily="@font/motivasans"
+                android:paddingLeft="1dp"
+                android:text="Classics"
+                android:textColor="@color/gamecardfonthighlight" />
+
+
+            <android.support.v7.widget.ContentFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/genrestart"
+                android:foreground="@color/genrestart"/>
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/genre5"
@@ -320,7 +404,6 @@
             android:layout_height="99dp"
             android:layout_margin="5dp"
             android:layout_weight="1"
-
             android:orientation="horizontal">
 
 
@@ -328,7 +411,7 @@
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
 
@@ -342,7 +425,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:background="@drawable/gradientlinear"
+                android:background="@drawable/morebutton"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 app:aString="Show more"
@@ -352,13 +435,13 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/gradientlinear" />
+                    android:src="@drawable/morebutton" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
-                    android:background="@drawable/gradientlinear"
+                    android:background="@drawable/morebutton"
                     android:backgroundTint="@drawable/controller_selector_color"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
