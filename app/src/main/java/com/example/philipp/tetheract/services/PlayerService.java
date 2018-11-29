@@ -15,6 +15,10 @@ import com.example.philipp.tetheract.MainActivity;
 
 
 public class PlayerService extends Service {
+
+    //TODO https://stackoverflow.com/questions/32644365/releasing-mediaplayer-and-stopping-it-onpause-and-onresume-gives-error-in-androi       https://priyankacool10.wordpress.com/2014/04/27/how-to-create-simple-unbound-service-in-android/ on pause und so
+
+
     private MediaSessionCompat mediaSession;
 
     @Override
@@ -48,9 +52,6 @@ public class PlayerService extends Service {
                     }
 
                 };
-
-
-
 
         mediaSession.setPlaybackToRemote(myVolumeProvider);
         mediaSession.setActive(true);

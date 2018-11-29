@@ -110,7 +110,7 @@ public class NavigationCardView extends BaseCard{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 this.setElevation(50);
             }*/
-             //  expand(1.2f);
+               expand(1.1f);
             }catch(Exception e){
 
             }
@@ -136,7 +136,7 @@ public class NavigationCardView extends BaseCard{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 this.setElevation(0);
             }*/
-         //   collapse();
+            collapse();
         }
     }
            /* Paint paint = new Paint();
@@ -152,6 +152,16 @@ public class NavigationCardView extends BaseCard{
         if(drawGlow)
             canvas.drawCircle(0, 0, 150, paint);
     }*/
+    public void highlight(){
+               ((FrameLayout)getChildAt(1)).setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.highlightgradient, null));
+               DrawableCompat.setTint(  ((ImageView)getChildAt(2)).getDrawable(), ContextCompat.getColor(getContext(), R.color.buttonTintHighlight));
+               //    ((ImageView)getChildAt(2)).setColorFilter(R.color.buttonTintHighlight);
+               setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+    }
+    public void deHighlight(){
+        ((FrameLayout)getChildAt(1)).setBackground(null);
+        DrawableCompat.setTint(  ((ImageView)getChildAt(2)).getDrawable(), ContextCompat.getColor(getContext(), R.color.buttonTintNoHighlight));
+    }
 
     public void collapse() {
         final float initialSize = getScaleX();
@@ -167,6 +177,7 @@ public class NavigationCardView extends BaseCard{
                 if (interpolatedTime == 1){
                     // Do this after expanded
                 }
+                setPivotX(0);
 
                 setScaleX((initialSize + (distanceToExpand * interpolatedTime)));
                 setScaleY((initialSize + (distanceToExpand * interpolatedTime)));
@@ -197,7 +208,7 @@ public class NavigationCardView extends BaseCard{
                     // Do this after collapsed
                 }
 
-
+                setPivotX(0);
 
                 setScaleX((initialSize + (distanceToCollapse * interpolatedTime)));
                 setScaleY((initialSize + (distanceToCollapse * interpolatedTime)));

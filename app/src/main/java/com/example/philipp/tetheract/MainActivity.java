@@ -38,6 +38,7 @@ import com.example.philipp.tetheract.data.Game;
 import com.example.philipp.tetheract.data.User;
 import com.example.philipp.tetheract.fragments.BlankFragment;
 import com.example.philipp.tetheract.layouts.BaseCard;
+import com.example.philipp.tetheract.layouts.ControlledDrawningOrderLayout;
 import com.example.philipp.tetheract.layouts.GameCardView;
 import com.example.philipp.tetheract.layouts.NavigationCardView;
 import com.example.philipp.tetheract.layouts.ShopButton;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
      AssetFileDescriptor activationAsset;
      FileDescriptor activationFile;
 
+    AssetFileDescriptor yoshiAsset;
+    FileDescriptor yoshiFile;
+
 
     LinearLayout[] tooltips=new LinearLayout[4];
 
@@ -91,8 +95,19 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
         library
 
     }
+    public enum ShopFilter{
+
+        owned,
+        all
+
+    }
 
     public NavigationStatus navigationStatus  = NavigationStatus.shop;
+
+    public ShopFilter shopFilterStatus= ShopFilter.all;
+
+
+
     public LinearLayout shopLayout;
     public View shopFragmentView;
 
@@ -204,26 +219,10 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                     }
                 });
 
+        //initialize navigation
+        setupNavbuttons();
 
 
-
-        //initialize navigationButtons
-        navigationButtons[0]=(NavigationCardView) findViewById(R.id.Shop);
-        navigationButtons[1]=(NavigationCardView) findViewById(R.id.Library);
-        navigationButtons[2]=(NavigationCardView) findViewById(R.id.Settings);
-        navigationButtons[3]=(NavigationCardView) findViewById(R.id.Community);
-
-        for(int i=0;i<navigationButtons.length;i++){
-
-            navigationButtons[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(), "Not implemented yet", Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-
-        navigationBar=(LinearLayout) findViewById(R.id.Navigation);
 
         shopLayout =(LinearLayout) findViewById(R.id.ShopView);
         shopFragmentView =(View) findViewById(R.id.ShopFragmentView);
@@ -246,6 +245,8 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
         activationAsset = getResources().openRawResourceFd(R.raw.activation);
         activationFile = activationAsset.getFileDescriptor();
 
+        yoshiAsset = getResources().openRawResourceFd(R.raw.yoshitongue);
+        yoshiFile = yoshiAsset.getFileDescriptor();
 
 
 
@@ -270,10 +271,50 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
         //start service
         startService(new Intent(this, PlayerService.class));
-
+       // startForegroundService(new Intent(this, PlayerService.class));
 
     }
 
+
+    public void setupNavbuttons(){
+        //initialize navigationButtons
+        navigationButtons[0]=(NavigationCardView) findViewById(R.id.Shop);
+        navigationButtons[1]=(NavigationCardView) findViewById(R.id.Library);
+        navigationButtons[2]=(NavigationCardView) findViewById(R.id.Settings);
+        navigationButtons[3]=(NavigationCardView) findViewById(R.id.Community);
+
+        for(int i=0;i<navigationButtons.length;i++){
+
+            navigationButtons[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // notImplementedWarning();
+                }
+            });
+        }
+
+        navigationButtons[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+               changeNavigationStatus(NavigationStatus.shop);
+
+            }
+        });
+
+        navigationButtons[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+             changeNavigationStatus(NavigationStatus.library);
+
+            }
+        });
+
+
+
+        navigationBar=(LinearLayout) findViewById(R.id.Navigation);
+    }
 
 
     @Override
@@ -289,14 +330,24 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                         NavigationCardView focusedButton = (NavigationCardView) getCurrentFocus();
                         if(focusedButton == navigationButtons[0]){
                             swapNavigationFocus();
+                            changeNavigationStatus(NavigationStatus.shop);
+
+
                             return false;
-                        }else{
-                            Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show();
                         }
+                        if(focusedButton == navigationButtons[1]){
+                            swapNavigationFocus();
+                            changeNavigationStatus(NavigationStatus.library);
+
+
+                            return false;
+                        }
+
+                        // notImplementedWarning();
                     }
                     catch(Exception e){
 
-                        Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show();
+                        // notImplementedWarning();
 
                     }
                 }
@@ -304,7 +355,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
 
             //shop navigation
-            if(navigationStatus==NavigationStatus.shop){
+            if(navigationStatus==NavigationStatus.shop||navigationStatus==NavigationStatus.library){
                 if(k.getKeyCode()==KeyEvent.KEYCODE_BUTTON_A){
                     try {
                         GameCardView focusedButton = (GameCardView) getCurrentFocus();
@@ -327,12 +378,11 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                         }
                     }
                     catch(Exception e){
-
-                        Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show();
-
+                       // notImplementedWarning();
                     }
                 }
                 if(k.getKeyCode()==KeyEvent.KEYCODE_BUTTON_B){
+
                     swapNavigationFocus();
                     return false;
                 }
@@ -401,13 +451,18 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
         if(navigationStatus == NavigationStatus.main){
 
+            try {
 
+                ((ControlledDrawningOrderLayout) (findViewById(R.id.secondmain))).setChildDrawLast(1);
+            }catch (Exception e){
+
+            }
             //set shop layout focusable
             shopLayout.setFocusable(true);
             shopLayout.setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
             shopFragmentView.setFocusable(true);
             //request focus
-           lastSlectedCardView.requestFocus();
+            lastSlectedCardView.requestFocus();
 
             //set navigation not focusable
             navigationBar.setFocusable(false);
@@ -416,15 +471,18 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
 
 
-            //change status
-            navigationStatus = NavigationStatus.shop;
-
-
-
           //  Toast.makeText(this, "now shop", Toast.LENGTH_SHORT).show();
         }else{
 
             //set navigation layout focusable
+            try {
+
+                ((ControlledDrawningOrderLayout) (findViewById(R.id.secondmain))).setChildDrawLast(0);
+            }catch (Exception e){
+
+            }
+
+
             navigationBar.setFocusable(true);
             navigationBar.setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
             //set navigationbuttons focusable
@@ -432,11 +490,18 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
                navigationButtons[i].setFocusable(true);
                navigationButtons[i].setFocusableInTouchMode(true);
+               navigationButtons[i].deHighlight();
 
             }
             //request focus
-            navigationButtons[0].requestFocus();
+            if(navigationStatus==NavigationStatus.shop){
 
+                navigationButtons[0].requestFocus();
+            }
+            if(navigationStatus==NavigationStatus.library){
+
+                navigationButtons[1].requestFocus();
+            }
 
             //set shop not focusable
             shopLayout.setFocusable(false);
@@ -489,9 +554,37 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                 player.setLooping(false);
                 player.prepare();
 
-                PlaybackParams params = new PlaybackParams();
-                params.setPitch(random.nextFloat());
-                player.setPlaybackParams(params);
+                PlaybackParams params = null;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                    params = new PlaybackParams();
+
+                    params.setPitch(random.nextFloat());
+                    player.setPlaybackParams(params);
+                }
+
+                player.start();
+
+            } catch (IOException ex) {
+                //LOGGER.error(ex.getLocalizedMessage(), ex);
+            }
+        }
+
+        if(sound.equals("yoshi")){
+            player.setVolume(6f,6f);
+
+            try {
+
+                player.setDataSource(yoshiFile, yoshiAsset.getStartOffset(), yoshiAsset.getLength());
+                player.setLooping(false);
+                player.prepare();
+
+                PlaybackParams params = null;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                    params = new PlaybackParams();
+                    params.setPitch(random.nextFloat());
+                    player.setPlaybackParams(params);
+                }
+
 
                 player.start();
 
@@ -561,6 +654,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
                 GameCardView v = (GameCardView)vi.inflate(R.layout.game_card_layout, null);
                 Game game= new Game(jsonArray.getJSONObject(i));
+
                 ViewGroup insertPoint = (ViewGroup) findViewById(R.id.genre1);
                 if(jsonArray.getJSONObject(i).getString("Genre").equals("Editor's Pick")){
                      insertPoint = (ViewGroup) findViewById(R.id.genre1);
@@ -581,18 +675,19 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                     insertPoint = (ViewGroup) findViewById(R.id.genre6);
                 }
 
-                TableLayout.LayoutParams params = new TableLayout.LayoutParams(725, ViewGroup.LayoutParams.MATCH_PARENT,1);
+                TableLayout.LayoutParams params = new TableLayout.LayoutParams(725, ViewGroup.LayoutParams.MATCH_PARENT,10);
                 //TableLayout.LayoutParams params = new TableLayout.LayoutParams()
                 params.setMargins(10,0,10,0);
                 insertPoint.addView(v, 1, params);
                 //vi.inflate(R.layout.game_card_layout,insertPoint);
-               //v.game = game;
+                //v.game = game;
                 v.setGame(game);
                 v.parentparent = shopView;
                 v.parentIndex = shopView.indexOfChild(insertPoint);
 
                 visibleCardviews[i]=v;
 
+                v.appear();
 
 
                 v.setOnClickListener(new View.OnClickListener() {
@@ -632,6 +727,64 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
     }
 
+    public void filterGames(boolean library){
+
+        for(int i=0;i<visibleCardviews.length;i++){
+
+            if(library){
+
+                if(!visibleCardviews[i].game.isInLibrary){
+
+                    visibleCardviews[i].disAppear();
+
+                }
+            }else{
+
+                if(!visibleCardviews[i].game.isInLibrary){
+
+                    visibleCardviews[i].appear();
+
+                }
+
+            }
+
+        }
+
+    }
+
+    public void changeNavigationStatus(NavigationStatus requestedStatus){
+
+        if(requestedStatus == NavigationStatus.shop){
+
+            if(shopFilterStatus==ShopFilter.owned){
+                filterGames(false);
+                shopFilterStatus=ShopFilter.all;
+
+
+            }
+            navigationButtons[0].highlight();
+            navigationStatus=NavigationStatus.shop;
+
+        }
+
+        if(requestedStatus == NavigationStatus.library){
+
+            if(shopFilterStatus==ShopFilter.all){
+                filterGames(true);
+                shopFilterStatus=ShopFilter.owned;
+
+            }
+            navigationButtons[1].highlight();
+            navigationStatus=NavigationStatus.library;
+        }
+    }
+
+    public void notImplementedWarning(){
+
+        Toast.makeText(getApplicationContext(), "Not implemented yeeeeeeeeeeeer", Toast.LENGTH_SHORT).show();
+        playSound("yoshi");
+
+    }
 
 
 }

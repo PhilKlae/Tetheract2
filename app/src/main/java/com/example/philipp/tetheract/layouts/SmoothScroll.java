@@ -89,8 +89,8 @@ public class SmoothScroll extends ScrollView {
     @Override
     protected int computeScrollDeltaToGetChildRectOnScreen(android.graphics.Rect rect){
         setSmoothScrollingEnabled(true);
-        rect.top +=rect.height() - (rect.height()*1.2);
-        rect.bottom -=rect.height() - (rect.height()*1.2);
+        rect.top +=rect.height() - (rect.height()*1.4);
+        rect.bottom -=rect.height() - (rect.height()*1.4);
         return super.computeScrollDeltaToGetChildRectOnScreen(rect);
     }
 

@@ -47,7 +47,7 @@ public class GameCardView extends BaseCard{
     Bitmap image;
     public int parentIndex=0;
     public ViewGroup parentparent;
-
+    float grow=1.4f;
     public boolean zoom = true;
     ScrollView shopScrollView;
     public GameCardView(Context context) {
@@ -113,12 +113,12 @@ public class GameCardView extends BaseCard{
             ((TextView)(getChildAt(1))).setTextColor(getResources().getColor(R.color.gamecardfonthighlight));
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                this.setElevation(50);
+                this.setElevation(100);
             }
            // setForeground(ResourcesCompat.getDrawable(getResources(), R.drawable.border, null));
 
             if(zoom){
-                expand(1.2f);
+                expand(grow);
             }
 
         }else{
@@ -138,12 +138,84 @@ public class GameCardView extends BaseCard{
         }
     }
 
+    public void appear(){
 
+        final float initialSize = 0;
+        float targetSize = 1;
+        setFocusable(true);
+       // setAlpha(0);
+        setVisibility(VISIBLE);
+        final float distanceToExpand = targetSize - initialSize;
+
+        Animation a = new Animation() {
+            @Override
+            protected void applyTransformation(float interpolatedTime, Transformation t) {
+                if (interpolatedTime == 1){
+                    // Do this after expanded
+
+                }
+               // setAlpha((initialSize + (distanceToExpand * interpolatedTime)));
+                //setPivotX(0);
+                setScaleX((initialSize + (distanceToExpand * interpolatedTime)));
+                //
+                //
+
+            }
+
+            @Override
+            public boolean willChangeBounds() {
+                return true;
+            }
+
+
+        };
+
+        a.setDuration(500);
+        startAnimation(a);
+    }
+
+    public void disAppear(){
+
+        final float initialSize = 1;
+        float targetSize = 0;
+        // setAlpha(0);
+        setFocusable(false);
+
+        final float distanceToExpand = targetSize - initialSize;
+
+        Animation a = new Animation() {
+            @Override
+            protected void applyTransformation(float interpolatedTime, Transformation t) {
+                if (interpolatedTime == 1){
+                    // Do this after expanded
+                    setVisibility(GONE);
+                }
+                // setAlpha((initialSize + (distanceToExpand * interpolatedTime)));
+                //setPivotX(0);
+                setScaleX((initialSize + (distanceToExpand * interpolatedTime)));
+                //
+                //
+
+            }
+
+            @Override
+            public boolean willChangeBounds() {
+                return true;
+            }
+        };
+
+        a.setDuration(500);
+        startAnimation(a);
+    }
 
     public void collapse() {
+
         final float initialSize = getScaleX();
 
         float targetSize = 1;
+
+        final float initialTranslate=getTranslationY();
+        final float targetTranslate=0;
 
         final float distanceToExpand = targetSize - initialSize;
 
@@ -153,16 +225,19 @@ public class GameCardView extends BaseCard{
                 if (interpolatedTime == 1){
                     // Do this after expanded
                 }
-
+                //setPivotX(0.5f);
                 setScaleX((initialSize + (distanceToExpand * interpolatedTime)));
                 setScaleY((initialSize + (distanceToExpand * interpolatedTime)));
+
+               // setTranslationY((initialTranslate + (targetTranslate * interpolatedTime)));
+
                 //requestLayout();
             }
 
-           /* @Override
+            @Override
             public boolean willChangeBounds() {
                 return true;
-            }*/
+            }
         };
 
         a.setDuration(100);
@@ -170,11 +245,15 @@ public class GameCardView extends BaseCard{
     }
 
     public void expand(float targetSize) {
+
         final float initialSize = getScaleX();
 
 
 
         final float distanceToCollapse =  ( targetSize - initialSize);
+
+        final float initialTranslate=getTranslationY();
+        final float targetTranslate=-10f;
 
         Animation a = new Animation() {
             @Override
@@ -184,16 +263,18 @@ public class GameCardView extends BaseCard{
                 }
 
 
-
+               // setPivotX(0.5f);
                 setScaleX((initialSize + (distanceToCollapse * interpolatedTime)));
                 setScaleY((initialSize + (distanceToCollapse * interpolatedTime)));
+
+               // setTranslationY((initialTranslate + (targetTranslate * interpolatedTime)));
                 //requestLayout();
             }
 
-           /* @Override
+            @Override
             public boolean willChangeBounds() {
                 return true;
-            }*/
+            }
         };
 
         a.setDuration(100);

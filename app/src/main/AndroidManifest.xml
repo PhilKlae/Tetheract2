@@ -3,6 +3,8 @@
     package="com.example.philipp.tetheract">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
 
@@ -16,11 +18,14 @@
         android:largeHeap="true"
         >
 
-        <service android:name=".PlayerService"/>
+        <service android:name=".services.PlayerService"
+            android:enabled="true"
+            />
 
         <activity android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="landscape"
+            android:launchMode="singleTask"
             >
 
 
@@ -33,10 +38,13 @@
 
         </activity>
         <activity android:name=".GameDetailActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+
+
     </application>
 
 </manifest>

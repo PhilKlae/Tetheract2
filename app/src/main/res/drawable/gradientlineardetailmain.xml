@@ -3,7 +3,7 @@
 
     <gradient
         android:angle="0"
-        android:endColor="@color/navbuttonback"
+        android:endColor="@color/morebuttonstart"
         android:startColor="@color/morebuttonstart"
         android:type="linear" />
 

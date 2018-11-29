@@ -76,13 +76,13 @@
                 android:layout_height="2dp"
                 android:layout_gravity="center_vertical"
                 android:background="@color/genrestart"
-                android:foreground="@color/genrestart"/>
+                android:foreground="@color/genrestart" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/genre3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="99dp"
             android:layout_margin="5dp"
 
@@ -452,7 +452,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="10dp"
+            android:layout_height="20dp"
             android:layout_weight="1" />
 
     </com.example.philipp.tetheract.layouts.ControlledDrawningOrderLayout>
