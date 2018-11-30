@@ -20,6 +20,7 @@ public class BaseCard extends CardView {
 
     public BaseCard(Context context) {
         super(context);
+
         for(int i=0;i<buttonTooltips.length;i++){
             buttonTooltips[i] = "";
         }
@@ -27,6 +28,7 @@ public class BaseCard extends CardView {
 
     public BaseCard(Context context, AttributeSet attrs) {
         super(context, attrs);
+
         for(int i=0;i<buttonTooltips.length;i++){
             buttonTooltips[i] = "";
         }
@@ -48,6 +50,7 @@ public class BaseCard extends CardView {
 
     public BaseCard(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+
         for(int i=0;i<buttonTooltips.length;i++){
             buttonTooltips[i] = "";
         }
@@ -72,7 +75,7 @@ public class BaseCard extends CardView {
     @Override
     protected void onFocusChanged(boolean gainFocus, int direction, @Nullable Rect previouslyFocusedRect) {
         super.onFocusChanged(gainFocus, direction, previouslyFocusedRect);
-
+        setSoundEffectsEnabled(false);
         if(gainFocus){
             try {
               //  ((MainActivity) getContext()).playSound("activation"); SOUND

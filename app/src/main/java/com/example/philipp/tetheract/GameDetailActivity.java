@@ -3,6 +3,8 @@ package com.example.philipp.tetheract;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.hardware.display.DisplayManager;
@@ -21,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.philipp.tetheract.data.Game;
 import com.example.philipp.tetheract.layouts.BaseCard;
+import com.example.philipp.tetheract.layouts.Slider;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 
@@ -152,8 +155,8 @@ public class GameDetailActivity extends AppCompatActivity {
             }
         });
 
-
-        final ImageView bigImage = ((ImageView)findViewById(R.id.bigImage));
+        //TODO reimplement
+       /* final ImageView bigImage = ((ImageView)findViewById(R.id.bigImage));
 
 
         bigImage.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -171,12 +174,46 @@ public class GameDetailActivity extends AppCompatActivity {
                     }
 
                 }
-        }});
+        }});*/
 
         findViewById(R.id.wishlist).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Not implemented yet", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        final Slider slider = (Slider) findViewById(R.id.ImageSlider);
+        slider.getViewTreeObserver().addOnGlobalLayoutListener(
+
+                new ViewTreeObserver.OnGlobalLayoutListener() {
+                    @Override
+                    public void onGlobalLayout() {
+                        PackageManager m = getPackageManager();
+                        String s = getPackageName();
+                        PackageInfo p = null;
+                        try {
+                            p = m.getPackageInfo(s, 0);
+                        } catch (PackageManager.NameNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                        s = p.applicationInfo.dataDir;
+
+                        s= getFilesDir().getAbsolutePath();
+
+                        slider.setup(s + "/" +  game.thumbnailPath);
+                    }
+                }
+
+        );
+
+
+        findViewById(R.id.ImageSlider).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((Slider)v).slideDirection(1);
+
+
             }
         });
 

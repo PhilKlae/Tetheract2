@@ -1,42 +1,24 @@
 package com.example.philipp.tetheract.layouts;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.res.ResourcesCompat;
-import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.philipp.tetheract.MainActivity;
 import com.example.philipp.tetheract.R;
 import com.example.philipp.tetheract.data.Game;
-
-import org.w3c.dom.Text;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class GameCardView extends BaseCard{
 
@@ -125,7 +107,7 @@ public class GameCardView extends BaseCard{
 
 
 
-            ((TextView)(getChildAt(1))).setTextColor(getResources().getColor(R.color.font));
+            ((TextView)(getChildAt(1))).setTextColor(getResources().getColor(R.color.GameCardFont));
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 this.setElevation(0);

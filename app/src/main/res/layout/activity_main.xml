@@ -69,9 +69,9 @@
 
                 <ImageView
 
-                    android:layout_width="50dp"
+                    android:layout_width="44dp"
                     android:layout_height="110dp"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="center_vertical|center_horizontal"
                     android:background="@android:color/transparent"
                     android:backgroundTint="@drawable/controller_selector_color"
                     android:focusable="false"
@@ -118,16 +118,16 @@
 
                 <ImageView
 
-                    android:layout_width="50dp"
+                    android:layout_width="38dp"
                     android:layout_height="110dp"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="center_vertical|center_horizontal"
                     android:background="@android:color/transparent"
                     android:backgroundTint="@drawable/controller_selector_color"
                     android:focusable="false"
 
                     android:focusableInTouchMode="false"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/icon_library"
+                    android:src="@drawable/tetheract_icon_small"
                     android:tint="@color/buttonTintNoHighlight" />
 
             </com.example.philipp.tetheract.layouts.NavigationCardView>
@@ -168,14 +168,14 @@
 
                 <ImageView
 
-                    android:layout_width="50dp"
+                    android:layout_width="39dp"
                     android:layout_height="113dp"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="center_vertical|center_horizontal"
                     android:background="@android:color/transparent"
                     android:backgroundTint="@drawable/controller_selector_color"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerInside"
                     android:src="@drawable/icon_community"
                     android:tint="@color/buttonTintNoHighlight" />
             </com.example.philipp.tetheract.layouts.NavigationCardView>
@@ -216,7 +216,7 @@
 
                 <ImageView
 
-                    android:layout_width="36dp"
+                    android:layout_width="32dp"
                     android:layout_height="110dp"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:background="@android:color/transparent"

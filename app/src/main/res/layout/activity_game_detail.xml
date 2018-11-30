@@ -27,7 +27,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="10dp"
-            app:srcCompat="@drawable/steamicon" />
+            app:srcCompat="@drawable/tetheract_icon_small" />
 
         <TextView
             android:id="@+id/GameTitle"
@@ -60,24 +60,56 @@
                 android:background="@android:color/transparent"
                 android:orientation="vertical">
 
-                <com.example.philipp.tetheract.layouts.BaseCard
+                <com.example.philipp.tetheract.layouts.Slider
                     android:id="@+id/ImageSlider"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="275dp"
                     android:layout_marginBottom="6dp"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
                     android:transitionName="img"
                     app:cardBackgroundColor="@android:color/transparent">
 
-                    <ImageView
-                        android:id="@+id/bigImage"
+                    <com.example.philipp.tetheract.layouts.SliderChild
                         android:layout_width="match_parent"
-                        android:layout_height="270dp"
-                        android:layout_gravity="top"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/portalknightsdetail" />
-                </com.example.philipp.tetheract.layouts.BaseCard>
+                        android:layout_height="match_parent">
+
+                        <VideoView
+                            android:id="@+id/videoView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:scaleType="centerCrop" />
+
+                    </com.example.philipp.tetheract.layouts.SliderChild>
+
+                    <com.example.philipp.tetheract.layouts.SliderChild
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible">
+
+                        <VideoView
+                            android:id="@+id/videoView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:scaleType="centerCrop" />
+
+                    </com.example.philipp.tetheract.layouts.SliderChild>
+
+                </com.example.philipp.tetheract.layouts.Slider>
 
                 <com.example.philipp.tetheract.layouts.GameDeatailCardView
                     android:id="@+id/GameDetailStartGame"

@@ -48,7 +48,7 @@
     <color name="navbuttonback">#485d70</color>
     <color name="iconTint">#13a9da</color>
     <color name="headlineFont">#13a9da</color>
-    <color name="highlight">#92c46d</color>
+    <color name="highlight">#E2F1F1</color>
 
     <color name="tooltipBar">#485d70</color>
     <color name="tooltipFont">#7fb1b2</color>
@@ -61,17 +61,14 @@
     <color name="textBackground">#9c13a9da</color>
 
     <color name="buttonTintNoHighlight">#7fb1b2</color>
-    <color name="buttonTintHighlight">#92c46d</color>
+    <color name="buttonTintHighlight">#7fb1b2</color>
     <color name="fontLight">#65bef2</color>
 
     <color name="gamecardhighlightbackground">#485d70</color>
     <color name="gamecardfonthighlight">#f0f0f0</color>
-    <color name="font">#788595</color>
+    <color name="GameCardFont">#485d70</color>
 
-    <color name="navbuttongradientstart">#92c46d</color>
-
-
-
+    <color name="navbuttongradientstart">#B3D6D6</color>
     <color name="detailbuttonendgradient">#1c344e</color>
     <color name="detailbuttonstartgradient">#485d70</color>
     <color name="detailGrey">#788595</color>

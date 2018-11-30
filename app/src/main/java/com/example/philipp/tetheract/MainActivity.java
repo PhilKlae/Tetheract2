@@ -48,6 +48,7 @@ import com.example.philipp.tetheract.services.PlayerService;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.io.File;
 import java.io.FileDescriptor;
 import java.io.IOException;
 import java.io.InputStream;
@@ -343,11 +344,11 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                             return false;
                         }
 
-                        // notImplementedWarning();
+                         notImplementedWarning();
                     }
                     catch(Exception e){
 
-                        // notImplementedWarning();
+                        notImplementedWarning();
 
                     }
                 }
@@ -378,7 +379,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                         }
                     }
                     catch(Exception e){
-                       // notImplementedWarning();
+                        notImplementedWarning();
                     }
                 }
                 if(k.getKeyCode()==KeyEvent.KEYCODE_BUTTON_B){
@@ -439,8 +440,6 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
     public void onFragmentInteraction(Uri uri) {
 
     }
-
-
 
 
     public void swapNavigationFocus(){
@@ -525,8 +524,6 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
         MediaPlayer player = new MediaPlayer();
 
-
-
         if(sound.equals("focusChange")){
             player.setVolume(100,100);
             try {
@@ -581,7 +578,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                 PlaybackParams params = null;
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
                     params = new PlaybackParams();
-                    params.setPitch(random.nextFloat());
+                    params.setPitch(random.nextFloat()*0.2f + 0.8f);
                     player.setPlaybackParams(params);
                 }
 
@@ -758,6 +755,13 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
             if(shopFilterStatus==ShopFilter.owned){
                 filterGames(false);
+
+                int[] test = {R.id.genre2,R.id.genre3,R.id.genre4,R.id.genre5,R.id.genre6};
+                for (int i=0;i<test.length;i++) {
+                    ViewGroup insertPoint = ((ViewGroup) findViewById(test[i]));
+                    insertPoint.getChildAt(insertPoint.getChildCount()-1).setVisibility(View.VISIBLE);
+                }
+
                 shopFilterStatus=ShopFilter.all;
 
 
@@ -771,6 +775,13 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
             if(shopFilterStatus==ShopFilter.all){
                 filterGames(true);
+
+                int[] test = {R.id.genre2,R.id.genre3,R.id.genre4,R.id.genre5,R.id.genre6};
+                for (int i=0;i<test.length;i++) {
+                    ViewGroup insertPoint = ((ViewGroup) findViewById(test[i]));
+                    insertPoint.getChildAt(insertPoint.getChildCount()-1).setVisibility(View.INVISIBLE);
+                }
+
                 shopFilterStatus=ShopFilter.owned;
 
             }
@@ -781,8 +792,15 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
     public void notImplementedWarning(){
 
-        Toast.makeText(getApplicationContext(), "Not implemented yeeeeeeeeeeeer", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Not implemented yet", Toast.LENGTH_SHORT).show();
         playSound("yoshi");
+
+
+       /* File directoryToStore;
+        directoryToStore = getBaseContext().getExternalFilesDir("TestFolder");
+        if (!directoryToStore.exists()) {
+            if (directoryToStore.mkdir()) ; //directory is created;
+        }*/
 
     }
 
