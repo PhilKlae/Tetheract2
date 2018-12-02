@@ -1,12 +1,14 @@
 package com.example.philipp.tetheract.layouts;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.content.FileProvider;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.View;
 import android.view.ViewStub;
@@ -18,6 +20,8 @@ import android.widget.Toast;
 import com.example.philipp.tetheract.data.Game;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,8 +66,8 @@ public class Slider extends BaseCard {
     }
 
     public void setup(String path){
-        videoCount = loadVideos(path + "/vid/");
-        imageCount = loadImages(path + "/img/");
+        videoCount = loadVideos(path + "/vid");
+        imageCount = loadImages(path + "/img");
         count = imageCount + videoCount;
 
         if(videoCount>0){
@@ -185,29 +189,50 @@ public class Slider extends BaseCard {
 
     public int loadImages(String path){
 
-        List<String> paths = new ArrayList<String>();
-        File directory = new File(path);
+        String[] paths = new String[0];
+        try {
+            paths = getContext().getAssets().list(path);
 
-        File[] files = directory.listFiles();
-        Toast.makeText(getContext(), path, Toast.LENGTH_SHORT).show();
-        if(files==null){
-            return 0;
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        for (int i = 0; i < files.length; ++i) {
-            paths.add(files[i].getAbsolutePath());
-        }
 
-        bitmaps = new Bitmap[paths.size()];
+
+
+        bitmaps = new Bitmap[paths.length];
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+        Toast.makeText(getContext(), path, Toast.LENGTH_SHORT).show();
+        for(int i=0;i<paths.length;i++){
+            paths[i] = path + "/" + paths[i];
+            Toast.makeText(getContext(), paths[i], Toast.LENGTH_SHORT).show();
+            Log.d("ASSETS", "loadImages: " + paths[i]);
 
-        for(int i=0;i<paths.size();i++){
-            bitmaps[i] = scaleDown(BitmapFactory.decodeFile(paths.get(i), options),getMeasuredWidth(),false);
+            bitmaps[i] = scaleDown(getBitmapFromAsset(getContext(),paths[i]),getMeasuredWidth(),false);
         }
 
-    return paths.size();
+    return paths.length;
 
+    }
+
+
+    public static Bitmap getBitmapFromAsset(Context context, String filePath) {
+        AssetManager assetManager = context.getAssets();
+
+        InputStream istr;
+        Bitmap bitmap = null;
+        try {
+            istr = assetManager.open(filePath);
+            bitmap = BitmapFactory.decodeStream(istr);
+        } catch (IOException e) {
+            Log.e("ERROR", "getBitmapFromAsset: " + e.toString() );
+            // handle exception
+        }
+
+        return bitmap;
     }
 
     public int loadVideos(String path){

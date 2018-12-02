@@ -156,7 +156,7 @@ public class GameDetailActivity extends AppCompatActivity {
         });
 
         //TODO reimplement
-       /* final ImageView bigImage = ((ImageView)findViewById(R.id.bigImage));
+        final ImageView bigImage = ((ImageView)findViewById(R.id.img2));
 
 
         bigImage.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -174,7 +174,7 @@ public class GameDetailActivity extends AppCompatActivity {
                     }
 
                 }
-        }});*/
+        }});
 
         findViewById(R.id.wishlist).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -183,7 +183,7 @@ public class GameDetailActivity extends AppCompatActivity {
             }
         });
 
-        final Slider slider = (Slider) findViewById(R.id.ImageSlider);
+   /*     final Slider slider = (Slider) findViewById(R.id.ImageSlider);
         slider.getViewTreeObserver().addOnGlobalLayoutListener(
 
                 new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -201,7 +201,7 @@ public class GameDetailActivity extends AppCompatActivity {
 
                         s= getFilesDir().getAbsolutePath();
 
-                        slider.setup(s + "/" +  game.thumbnailPath);
+                        slider.setup(game.thumbnailPath);
                     }
                 }
 
@@ -217,7 +217,7 @@ public class GameDetailActivity extends AppCompatActivity {
             }
         });
 
-
+*/
 
 
     }
